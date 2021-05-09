@@ -28,11 +28,9 @@ h2{
     margin: 100px 0 50px 0;
     font-weight: 800;
 }
-
 .se4 h2{
     margin: 50px 0;
 }
-
 h2::after{
     content: "";
     width: 2px;
@@ -55,13 +53,12 @@ p{
 }
 html {
     scroll-behavior: smooth;
-  }
+}
 
-/* 코로나 팝업창 */
-.cpopup{
+/* 코로나 관련 공지사항 */
+.notice{
     padding:25px;
     width: 500px;
-    height: 700px;
     position: fixed;
     top: 50px;
     left: 700px;
@@ -72,102 +69,77 @@ html {
     flex-direction: column;
     align-items: center;
 }
-.cpopup h2::after{
+.notice h2::after{
     display: none;
 }
-.cpopup > *{
+.notice > *{
     margin: 10px 0;
 }
-.cpopup > div{
+.notice_close{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.notice_close #closeCheck{
     cursor: pointer;
 }
-form label{ display: none; }
-form a, 
-form a:visited{ 
+.notice form{
+    display: flex;
+    flex-direction: row;
+}
+.notice form label{ display: none; }
+.notice form a, 
+.notice form a:visited{ 
     text-decoration: none;
     color: #444;
     display: block;
     margin: 0 0 0 10px;
 }
 
-/* 스크롤 */
-.scroll{
-    position: fixed;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
-}
-.scroll span{
-    width: 100%;
-    display: block;
-    text-align: center;
-    height: 40px;
-    line-height: 40px;
-    border: 1px solid rgba(255,255,255,0.5);
-    background: rgba(255,255,255,0.2);
-    color: #ddd;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: -1px;
-}
-.scroll span:first-child{
-    margin-bottom: 20px;
-}
-.scroll span:last-child{
-    margin-top: 20px;
-}
-.scroll span:hover,
-.scroll span.on{
-    background: rgba(0,0,0,0.2);
-}
 
-/* sese */
-.sese{
+
+/* campusGate */
+.campusGate{
     width: 100%;
-    height: 100px;
+    height: 50px;
     background-color: rgb(24, 32, 48);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     color: white;
-    font-size: 50px;
+    font-size: 30px;
     padding: 0 50px;
 }
-.showmap{
+.showmap, .closemap{
     cursor: pointer;
 }
-.mapclose{
-    cursor: pointer;
-}
-
-.se4{
-    height: 800px;
+/* campus */
+.campus{
     background-color: rgb(24, 32, 48);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    transition: height 1s;
+    padding: 10px 0 50px 0;
 }
-.se4 h2{
-    margin-bottom: 20px;
+.campus h2{
+    margin: 30px 0;
 }
-.se4 > .text > p{
+.campus h2::after{
+    display: none;
+}
+.campus > .text > p{
     color: white;
 }
-
 .map{
     width: 1000px;
     height: 600px;
-    background: url(../images/lecordonbleu/50whiteworld-map-4706158.png) 50% 50% no-repeat;
+    background: url(../images/lecordonbleu/50whiteworld-map-4706158.png) no-repeat;
     background-size: 100%;
     position: relative;
-    transition: all 4s;
 }
 .map .dot{
     width: 8px;
@@ -190,11 +162,10 @@ form a:visited{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     background: white;
     color: rgb(0, 35, 107);
     width: 250px;
-    height: auto;
     text-align: center;
     position: absolute;
     top: -110px;
@@ -207,8 +178,8 @@ form a:visited{
 }
 .map .d1{
     position: absolute;
-    top: 50%;
-    left: 60%;
+    top: 300px;
+    left: 600px;
 }
 .map .d2{
     position: absolute;
@@ -339,7 +310,7 @@ form a:visited{
     justify-content: space-between;
     align-items: center;
 }
-.mMenu{
+.mMenu, .mX{
     display: none;
 }
 .header .logo{
@@ -355,9 +326,7 @@ form a:visited{
     display: flex;
     justify-content: space-between;
 }
-.msearch{
-    display: none;
-}
+
 .span a{
     margin: 0 5px;
     text-decoration: none;
@@ -386,8 +355,9 @@ form a:visited{
     text-decoration: none;
     color: black;
 }
-
-
+.langbutton > a:hover{
+    background-color: #ddd;
+}
 /* nav */
 nav{
     border-top: 1px solid #ddd;
@@ -397,7 +367,7 @@ nav{
     z-index: 150;
     background-color: white;
 }
-.micon, .mX{
+.msearch{
     display: none;
 }
 .menu{
@@ -438,10 +408,9 @@ nav{
 .menu li.sub_menu:hover{
     height: 70px;
     transition: height 1s;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: rgba(154, 169, 193, 0.6);
     border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
 }
 
 
@@ -480,7 +449,23 @@ nav{
     background-color: rgb(0, 35, 107);
 }   
 
-
+/* top */
+.top{
+    width: 80px;
+    height: 50px;
+    background-color: rgb(0, 35, 107);
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    font-size: 20px;
+    color: rgb(154, 169, 193);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 100;
+    transition-duration: 1s;
+}
 
 /* visual */
 .visual{
@@ -783,23 +768,7 @@ nav{
   color: rgb(24, 32, 48);
 }
 
-/* top */
-.top{
-    width: 80px;
-    height: 50px;
-    background-color: rgb(0, 35, 107);
-    position: fixed;
-    bottom: 0;
-    right: 50px;
-    font-size: 20px;
-    color: rgb(154, 169, 193);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    z-index: 100;
-    transition-duration: 1s;
-}
+
 
 
 
@@ -838,6 +807,11 @@ nav{
     background-color: rgb(152,136,84);
     cursor: pointer;
 }
+.button:hover{
+    color: rgb(24, 32, 48);
+    background-color: rgb(153, 152, 152);
+    transition: all 1s;
+}
 .personal{
     width: 500px;
     display: flex;
@@ -864,7 +838,7 @@ textarea{
     height: 300px;
     resize: none;
 }
-.notice{
+.notice5{
     width: 1000px;
     text-align: center;
     margin: 0 auto;

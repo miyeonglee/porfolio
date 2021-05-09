@@ -15,130 +15,44 @@
     <link rel="stylesheet" type="text/css" media="all and (max-width:640px)" href="../css/mlecordonbleu.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-
-        $(document).ready(function () {
-            $(".se1 > .youtube").click(function () {
-                $(".se1 > iframe").toggleClass("on");
-            });
-
-            $(".se5 .online").click(function () {
-                $(".se5 .open, .se5 .formopen").toggleClass("on");
-                $(".personal").find(".pb").removeClass("on");
-            });
-
-            $(".se5 .pb").click(function () {
-                $(this).toggleClass("on");
-                $(".se5 .pb").not(this).removeClass("on");
-                return false;
-            });
-
-            $(".mMenu").click(function () {
-                $("header, nav, .logo, .msearch, .mX, .mMenu, .langbutton, .form").addClass("on");
-                $(".top").hide();
-            });
-            $(".mX").click(function () {
-                $("header, nav, .logo, .msearch, .mX, .mMenu, .langbutton, .form").removeClass("on");
-                $(".top").show();
-            });
-
-
-
-            $(".ffoo > li > div").click(function () {
-                $(this).next().toggleClass("on");
-                $(".ffoo > li > div").not(this).next().removeClass("on");
-                $(".fo").find("span").removeClass("on");
-                return false;
-            });
-
-            $(".fo > div").click(function () {
-                $(this).siblings().toggleClass("on");
-                $(".ffoo").find(".sub").removeClass("on");
-                return false;
-            });
-
-            $(".menu > li > a").click(function () {
-                $(this).next().toggleClass("on");
-                $(".menu > li > a").not(this).next().removeClass("on");
-                return false;
-            });
-
-            // $(".pprg > div").click(function () {
-            //     $(this).children(".firstp").toggleClass("on");
-            //     $(".pprg > div").not(this).children(".firstp").removeClass("on");
-            // });
-
-            $(".pprg > div").hover(function () {
-                $(this).toggleClass("on");
-                $(".pprg > div").not(this).removeClass("on");
-            });
-
-            $(window).resize(function() {
-                 if($(window).width() < 641) {
-                    $(".pprg > div").click(function () {
-                $(this).children(".firstp").toggleClass("on");
-                $(".pprg > div").not(this).children(".firstp").removeClass("on");
-                    });
-                    } 
-            });
-
-            $(".top").hide();
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > $("header").height()) {
-                    $(".top").fadeIn("swing");
-                } else {
-                    $(".top").fadeOut("swing");
-                }
-            });
-         
-            $(".se4").hide();
-            $(".showmap").click(function(){
-                $(".se4").fadeToggle();
-            });
-
-            $(".mapclose").click(function(){
-                $(".sese").hide();
-            $(".se4").hide();
-            });
-
-        });
-
-    </script>
-
 
 </head>
 
 <body>
 
-    <div id="draggable" class="ui-widget-content cpopup">
+    <div id="draggable" class="ui-widget-content notice">
         <h2>코로나19 관련 공지사항</h2>
         <p>
             1. 최근 2주 기간 내 해외 방문, COVID-19 확진자 접촉, 집단감염이 발생한 장소를 방문하셨거나 감기와 유사한 증상이 있으신 경우 아카데미로 연락 바랍니다.
         </p>
         <p>2. 시연 시 제품 시식은 불가하나 개별적으로 용기를 갖고 오셔서 담아 가시는 것은 허용됩니다. 실습실에서 시식 또한 불가합니다.
         </p>
-        <p>3. 아카데미 내부에서 식사는 살롱 및 6층 엘리베이터 앞 칸막이가 되어 있는 자리에서만 가능합니다. (지하 1층을 비롯하여 다른 층에서는 불가합니다.) 점심시간에는 숙명여대 외부에 있는 식당을 이용 부탁드립니다. 외부에 나가실 때는 반드시 유니폼 및 조리화는 라커에 두시고 환복하신 후에 외출하시기 바랍니다.
+        <p>3. 아카데미 내부에서 식사는 살롱 및 6층 엘리베이터 앞 칸막이가 되어 있는 자리에서만 가능합니다. (지하 1층을 비롯하여 다른 층에서는 불가합니다.) 점심시간에는 숙명여대 외부에 있는 식당을
+            이용 부탁드립니다. 외부에 나가실 때는 반드시 유니폼 및 조리화는 라커에 두시고 환복하신 후에 외출하시기 바랍니다.
         </p>
         <p>4. 이외 마스크 착용 및 손 씻기 등 COVID-19를 예방하기 위해 필요한 안전 수칙을 기본으로 실천해주시고 지켜주시기를 부탁드립니다.
         </p>
+
+        <div class="notice_close">
         <form>
-            <input type="checkbox" id="pop_day"/>
+            <input type="checkbox" id="pop_day" />
             <label for="pop_day">1일동안닫기</label>
             <a href="#" class="btn_close">1일동안닫기</a>
         </form>
-
-        <div id="coronaClose">close</div>
+        <div id="closeCheck">close</div>
+    </div>
     </div>
 
-    <div class="sese">
+    <div class="campusGate">
         <span class="showmap">
             국제 캠퍼스
         </span>
-        <span class="mapclose">
+        <span class="closemap">
             &times;
         </span>
     </div>
-    <section class="se4">
+
+    <section id="campus" class="campus">
         <div class="text">
             <h2>Location</h2>
             <p>인터내셔널 사이트로 돌아가기</p>
@@ -368,18 +282,16 @@
     </section>
 
     <header>
-
         <div id="header" class="inner header">
             <a href="#" class="logo"></a>
             <span class="mX"><i class="fas fa-times"></i></span>
 
             <div class="search">
                 <div class="span">
-                    <a href="#">캠퍼스</a>
+                    <a href="#" class="campusbutton">캠퍼스</a>
                     <a href="#">선택 과정 보기</a>
                     <a href="#">로그인</a>
                 </div>
-
                 <div class="form">
                     <form>
                         <input type="search">
@@ -417,7 +329,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">프로그램</a>
+                <a href="#program">프로그램</a>
                 <ul class="sub_menu">
                     <li>그랑 디플로마</li>
                     <li>요리 디플로마</li>
@@ -456,7 +368,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">뉴스 & 이벤트</a>
+                <a href="#news">뉴스 & 이벤트</a>
             </li>
 
         </ul>
@@ -469,20 +381,18 @@
 
     </nav>
 
-
-
-    <div class="scroll">
-        <span data-id="header">top</span>
-
-        <span data-id="sese">LOCATION</span>
-        <span data-id="visual">main</span>
-        <span data-id="se1">seoul</span>
-        <span data-id="prg">PROGRAM</span>
-        <span data-id="se3">NEWS & EVENTS</span>
-        <span data-id="se5">온라인 문의</span>
-
-        <span data-id="footer">bottom</span>
+    <div class="quickmenu">
+        <div><span>Quik</span><span>Menu</span></div>
+        <a href="#">입학 지원</a>
+        <a href="lecordonbleuBrochure.html">안내 책자</a>
+        <a href="#">연락처</a>
+        <a href="#">소식 받기</a>
     </div>
+
+    <a href="#header" class="top">
+        TOP
+    </a>
+
 
 
     <div class="swiper-container inner visual">
@@ -522,26 +432,27 @@
         <a href="#pop" class="youtube">
             <i class="fab fa-youtube"></i>
         </a>
-        
-        
+
+
         <div id="pop" class="overlay">
             <div class="popup">
                 <a href="#none" class="close">&times;</a>
-        
+
                 <div class="iy">
-                <iframe id="youtubeplayer" src="https://www.youtube.com/embed/Ul_lC1D_Ljw?controls=0&mute=1" title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-              </div>
+                    <iframe id="youtubeplayer" src="https://www.youtube.com/embed/Ul_lC1D_Ljw?controls=0&mute=1"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
-        
+
         </div>
 
 
     </section>
 
-    <section class="inner prg">
+    <section id="program" class="inner prg">
         <h2>PROGRAM</h2>
         <div>
             <div class="pprg">
@@ -601,7 +512,7 @@
         </div>
     </section>
 
-    <section class="inner se3">
+    <section id="news" class="inner se3">
         <h2>NEWS & EVENTS</h2>
         <div class="swiper-container inews">
             <div class="swiper-wrapper img">
@@ -721,7 +632,7 @@
 
         </div>
 
-        <p class="notice open">
+        <p class="notice5 open">
             이 양식을 제출함으로써, 르 꼬르동 블루로부터 전자 메세지를 수신하는 것에 동의합니다. 저희는 귀하의 개인정보를 존중하며, 본인의 동의 없이 개인정보를 외부에 제공하지 않습니다. 모든
             커뮤니케이션은 르 꼬르동 블루를 통해 이루어지며 언제든지 이메일 하단에 있는 "수신거부" 링크를 클릭하거나 저희에게 직접 연락하여 전자 메세지 수신 동의를 철회할 수 있습니다.
         </p>

@@ -25,8 +25,8 @@ h3{
     font-size: 1rem;
 }
 
-/* 코로나 팝업 */
-.cpopup{
+/* 코로나 관련 공지사항 */
+.notice{
     top: 20px;
     left: 20px;
     width: 90%;
@@ -34,11 +34,15 @@ h3{
     overflow-y: scroll;
 }
 
+/* campus */
+.campusGate, .campus{
+    display: none;
+}
+
 /* 기본 */
 header{
     height: 80px;
     word-break: keep-all;
-
 }
 .header .search{
     display: none;
@@ -156,7 +160,6 @@ nav{
 }
 .menu > li .sub_menu > li{
     font-size: 20px;
-    margin: 0 20px;
 }
 .menu > li .sub_menu.on{
     display: flex;
@@ -332,10 +335,7 @@ header .mMenu.on{
     right: 0;
 }
 
-/* se4 */
-.se4{
-    display: none;
-}
+
 
 /* se5 */
 .se5{
