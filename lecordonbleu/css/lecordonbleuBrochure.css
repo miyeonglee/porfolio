@@ -452,7 +452,7 @@ nav{
     background-size: cover;
 }
 
-.button{
+button{
     width: 200px;
     height: 40px;
     border-radius: 30px;
@@ -464,7 +464,7 @@ nav{
     justify-content: center;
     margin: 50px auto;
 }
-.button:hover{
+button:hover{
     color: rgb(24, 32, 48);
     background-color: rgb(153, 152, 152);
     transition: all 1s;

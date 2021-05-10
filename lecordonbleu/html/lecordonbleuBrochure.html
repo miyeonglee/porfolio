@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="../css/lecordonbleuBrochure.css">
     <link rel="stylesheet" type="text/css" media="all and (max-width:640px)" href="../css/mlecordonbleuBrochure.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 
@@ -366,18 +365,18 @@
             <h2>캠퍼스 안내 책자 신청</h2>
         </div>
 
-        <div class="brochure inner">
+        <form class="brochure inner">
 
             <div class="b1">
-                    <h3>인터내셔널 브로슈어</h3>
+                <h3>인터내셔널 브로슈어</h3>
 
-                    <div class="bc">
-                        <div class="bphoto"></div>
-                        <span>Le Cordon Bleu International Brochure 20204</span>
-                        <form>
-                            <input type="checkbox">
-                        </form>
-                    </div>
+                <div class="bc">
+                    <div class="bphoto"></div>
+                    <span>Le Cordon Bleu International Brochure 20204</span>
+                    <input type="checkbox" name="brochure" value="인터내셔널 브로슈어" onclick='getCheckboxValue()'>
+
+                </div>
+
             </div>
 
             <div class="b2">
@@ -386,10 +385,10 @@
                 <div class="bc">
                     <div class="bphoto"></div>
                     <span>브로슈어</span>
-                    <form>
-                        <input type="checkbox">
-                    </form>
+                    <input type="checkbox" name="brochure" value="정규과정 프로그램" onclick='getCheckboxValue()'>
+
                 </div>
+
             </div>
 
             <div class="b3">
@@ -399,40 +398,94 @@
                     <div class="bc">
                         <div class="bphoto d1"></div>
                         <span>개인정보 수집 및 활용 동의서 & 병력확인서</span>
-                        <form>
-                            <input type="checkbox">
-                        </form>
+                        <input type="checkbox" name="brochure" value="개인정보 수집 및 활용 동의서 & 병력확인서"
+                            onclick='getCheckboxValue()'>
+
                     </div>
                     <div class="bc">
                         <div class="bphoto d2"></div>
                         <span>이력서&자기소개서</span>
-                        <form>
-                            <input type="checkbox">
-                        </form>
+                        <input type="checkbox" name="brochure" value="이력서&자기소개서" onclick='getCheckboxValue()'>
+
                     </div>
                     <div class="bc">
                         <div class="bphoto d3"></div>
                         <span>입학지원서</span>
-                        <form>
-                            <input type="checkbox">
-                        </form>
+                        <input type="checkbox" name="brochure" value="입학지원서" onclick='getCheckboxValue()'>
+
                     </div>
                 </div>
             </div>
 
-        </div>
-        <div class="button inner"><span>신청하기</span></div>
+            <button><span>신청하기</span></button>
+
+            <div> 다음을 선택하셨습니다.
+
+                <div id='result'></div>
+
+                안내책자 신청을 위해 아래 양식을 작성하거나 기존 계정이 있으신 경우 로그인 해주시기 바랍니다.<br>
+
+                선택한 안내책자는 다운로드 가능합니다.<br>
+
+                이와 관련하여 문의 사항이 있으시면 언제든지 연락주시기 바랍니다.
+            </div>
+
+
+            <table id="join">
+                <tr>
+                    <th>성</th>
+                    <td>
+                        <input type="text" name="name" id="first-name" autocomplete="off"/>
+                        <span id="firstnamelog" class="alert"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td>
+                        <input type="text" name="name" id="name" autocomplete="off"/>
+                        <span id="namelog" class="alert"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>전화번호</th>
+                    <td>
+                        <input type="tel" name="name" id="tel" maxlength="12" autocomplete="off"/>
+                        <span id="telllog" class="alert"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>메일주소</th>
+                    <td>
+                        <input type="text" id="email" autocomplete="off"/>
+                        <span>ex)miyeong1596@gmail.com</span>
+                        <span id="emaillog" class="alert"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>메일주소 확인</th>
+                    <td>
+                        <input type="text" id="checkemail" autocomplete="off"/>
+                        <span id="checkemaillog" class="alert"></span>
+                    </td>
+                </tr>
+
+            </table>
+            <button id="postBt"  type="submit" class="mt30" >전송하기</button>
+
+        </form>
+
+
 
     </div>
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script src="/js/jquery.cookie.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
 
     <script src="../js/lecordonbleuBrochure.js"></script>
 
