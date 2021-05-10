@@ -323,7 +323,6 @@ html {
     display: flex;
     justify-content: space-between;
 }
-
 .span a{
     margin: 0 5px;
     text-decoration: none;
@@ -364,7 +363,6 @@ nav{
     z-index: 150;
     background-color: white;
 }
-
 .menu{
     height: 70px;
     line-height: 70px;

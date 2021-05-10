@@ -73,6 +73,7 @@ nav.on{
     color: white;
     background-color: rgb(24, 32, 48);
     padding: 10px;
+    overflow: scroll;
 }
 .mX{
     display: flex;
@@ -89,7 +90,7 @@ nav.on{
     width: 170px;
     height: 50px;
 }
-form input{
+.mform input{
     width: 130px;
     height: 25px;
     margin-right: 10px;

@@ -50,12 +50,13 @@ $(document).ready(function () {
     $(".top").show();
   });
 
+
   $(".menu > li > a").click(function () {
     $(this).next().toggleClass("on");
     $(".menu > li > a").not(this).next().removeClass("on");
     return false;
-
   });
+ 
 
   // visual section
   var swiper1 = new Swiper('.swiper-container.visual', {
