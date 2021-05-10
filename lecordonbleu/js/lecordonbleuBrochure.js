@@ -15,7 +15,6 @@ $(window).scroll(function () {
 });
 
 //체크박스
-
 function getCheckboxValue()  {
   // 선택된 목록 가져오기
   const query = 'input[name="brochure"]:checked';
@@ -25,15 +24,32 @@ function getCheckboxValue()  {
   // 선택된 목록에서 value 찾기
   let result = '';
   selectedEls.forEach((el) => {
-    result += el.value + ' ';
+    result += el.value + '<br>';
   });
   
   // 출력
-  document.getElementById('result').innerText
+  document.getElementById('result').innerHTML
     = result;
 }
 
-
+//이름 유효성 검사
+$("#name").keyup(function () {
+  //이름 공백 검사
+  if ($("#name").val() == "") {
+      $("#namelog").text("이름을 입력해주세요");
+      $("#name").focus();
+      return false;
+  }
+  //이름 유효성 검사
+  else if (!named.test($("#name").val())) {
+      $("#namelog").text("이름형식에 맞게 입력해주세요");
+      // $("#name").val("");
+      $("#name").focus();
+      return false;
+  } else { // 서로 맞는경우
+      $("#namelog").text("");
+  }
+});
 
 //이메일 유효성 검사
 $("#email").keyup(function () {
@@ -54,24 +70,7 @@ $("#email").keyup(function () {
   }
 });
 
-//이름 유효성 검사
-$("#name").keyup(function () {
-  //이름 공백 검사
-  if ($("#name").val() == "") {
-      $("#namelog").text("이름을 입력해주세요");
-      $("#name").focus();
-      return false;
-  }
-  //이름 유효성 검사
-  else if (!named.test($("#name").val())) {
-      $("#namelog").text("이름형식에 맞게 입력해주세요");
-      // $("#name").val("");
-      $("#name").focus();
-      return false;
-  } else { // 서로 맞는경우
-      $("#namelog").text("");
-  }
-});
+
 
 // 모든폼에 입력을 다하면(유효성검사 완료) 전송하기 버튼 출력
 $('#postBt').hide();
