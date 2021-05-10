@@ -32,22 +32,75 @@ function getCheckboxValue()  {
     = result;
 }
 
-//이름 유효성 검사
+
+
+// 유효성 검사
+$("#first-name").keyup(function () {
+  // 성 공백 확인
+  if ($("#first-name").val() == "") {
+      $("#firstnamelog").text("성을 입력해주세요");
+      $("#first-name").focus();
+      return false;
+  }else { // 합당한 경우
+    $("#pwlog").text("");
+}
+});
 $("#name").keyup(function () {
-  //이름 공백 검사
+  // 이름 공백 확인
   if ($("#name").val() == "") {
       $("#namelog").text("이름을 입력해주세요");
       $("#name").focus();
       return false;
+  }else { // 합당한 경우
+    $("#pwlog").text("");
+}
+});
+
+
+
+
+
+
+// 비밀번호 유효성 검사
+$("#pw").keyup(function () {
+  // 비밀번호 공백 확인
+  if ($("#pw").val() == "") {
+      $("#pwlog").text("비밀번호를 입력해주세요");
+      $("#pw").focus();
+      return false;
   }
-  //이름 유효성 검사
-  else if (!named.test($("#name").val())) {
-      $("#namelog").text("이름형식에 맞게 입력해주세요");
-      // $("#name").val("");
-      $("#name").focus();
+  // 아이디와 비밀번호를 동일하게 쓴 경우
+  else if ($("#id").val() == $("#pw").val()) {
+      $("#pwlog").text("아이디와 비밀번호가 같습니다");
+      $("#pw").val("");
+      $("#pw").focus();
+      return false;
+  }
+  // 비밀번호 정규식으로 테스트
+  else if (!pass.test($("#pw").val())) {
+      $("#pwlog").text("형식에 맞게 입력해주세요");
+      $("#pw").focus();
+      return false;
+  } else { // 합당한 경우
+      $("#pwlog").text("");
+  }
+});
+// 비밀번호 확인란 유효성 검사
+$("#checkpw").keyup(function () {
+  // 비밀번호 확인란 공백 확인
+  if ($("#checkpw").val() == "") {
+      $("#checkpwlog").text("비밀번호 확인란을 입력해주세요");
+      $("#checkpw").focus();
+      return false;
+  }
+  // 비밀번호 서로확인
+  else if ($("#pw").val() != $("#checkpw").val()) {
+      $("#checkpwlog").text("비밀번호가 상이합니다");
+      // $("#checkpw").val("");
+      $("#checkpw").focus();
       return false;
   } else { // 서로 맞는경우
-      $("#namelog").text("");
+      $("#checkpwlog").text("");
   }
 });
 
@@ -70,13 +123,21 @@ $("#email").keyup(function () {
   }
 });
 
-
-
-// 모든폼에 입력을 다하면(유효성검사 완료) 전송하기 버튼 출력
-$('#postBt').hide();
-function showPostBt(){
-    var allLogClear = $('#join input');
-    if(allLogClear.val() !== ""){
-        $('#postBt').show();
-    }
-}
+//이름 유효성 검사
+$("#name").keyup(function () {
+  //이름 공백 검사
+  if ($("#name").val() == "") {
+      $("#namelog").text("이름을 입력해주세요");
+      $("#name").focus();
+      return false;
+  }
+  //이름 유효성 검사
+  else if (!named.test($("#name").val())) {
+      $("#namelog").text("이름형식에 맞게 입력해주세요");
+      // $("#name").val("");
+      $("#name").focus();
+      return false;
+  } else { // 서로 맞는경우
+      $("#namelog").text("");
+  }
+});
