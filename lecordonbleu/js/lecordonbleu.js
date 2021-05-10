@@ -40,6 +40,23 @@ $(document).ready(function () {
     $(".campus").fadeToggle();
   });
 
+  //nav
+  $(".mMenu").click(function () {
+    $("nav").addClass("on");
+    $(".top").hide();
+  });
+  $(".mX").click(function () {
+    $("nav").removeClass("on");
+    $(".top").show();
+  });
+
+  $(".menu > li > a").click(function () {
+    $(this).next().toggleClass("on");
+    $(".menu > li > a").not(this).next().removeClass("on");
+    return false;
+
+  });
+
   // visual section
   var swiper1 = new Swiper('.swiper-container.visual', {
     spaceBetween: 30,
@@ -63,14 +80,7 @@ $(document).ready(function () {
     return false;
   });
 
-  $(".mMenu").click(function () {
-    $("header, nav, .logo, .msearch, .mX, .mMenu, .langbutton, .form").addClass("on");
-    $(".top").hide();
-  });
-  $(".mX").click(function () {
-    $("header, nav, .logo, .msearch, .mX, .mMenu, .langbutton, .form").removeClass("on");
-    $(".top").show();
-  });
+
 
 
 
@@ -87,15 +97,9 @@ $(document).ready(function () {
     return false;
   });
 
-  $(".menu > li > a").click(function () {
-    $(this).next().toggleClass("on");
-    $(".menu > li > a").not(this).next().removeClass("on");
-  });
 
-  // $(".pprg > div").click(function () {
-  //     $(this).children(".firstp").toggleClass("on");
-  //     $(".pprg > div").not(this).children(".firstp").removeClass("on");
-  // });
+
+
 
   $(".pprg > div").hover(function () {
     $(this).toggleClass("on");

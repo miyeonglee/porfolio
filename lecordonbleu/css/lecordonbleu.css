@@ -310,9 +310,6 @@ html {
     justify-content: space-between;
     align-items: center;
 }
-.mMenu, .mX{
-    display: none;
-}
 .header .logo{
     width: 500px;
     height: 150px;
@@ -367,9 +364,7 @@ nav{
     z-index: 150;
     background-color: white;
 }
-.msearch{
-    display: none;
-}
+
 .menu{
     height: 70px;
     line-height: 70px;
@@ -412,7 +407,9 @@ nav{
     background-color: rgba(154, 169, 193, 0.6);
     border-top: 1px solid #ddd;
 }
-
+.mMenu, .mX, .msearch, .mform, .mlangbutton{
+    display: none;
+}
 
 /* quickmenu */
 .quickmenu{
