@@ -75,8 +75,8 @@ html {
 .notice > *{
     margin: 10px 0;
 }
-.noticetext{
-    margin: 10px 0;
+.noticetext p{
+    margin: 15px 0;
 }
 .notice_close{
     width: 80%;
@@ -797,6 +797,9 @@ nav{
 
 .se5 form > *{
     margin-bottom: 10px;
+}
+.se5 form span{
+    font-size: 1rem;
 }
 .button{
     width: 200px;

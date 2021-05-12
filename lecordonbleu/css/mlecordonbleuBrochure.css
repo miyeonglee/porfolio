@@ -1,0 +1,56 @@
+@charset "UTF-8";
+body{
+    min-width: 320px;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid olive; */
+    font-family: 'Noto Serif KR', serif;
+    list-style: none;
+}
+.inner{
+    width: 100%;
+    margin: 0 auto;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1rem;
+}
+
+
+/* .section */
+.visual{
+    height: 300px;
+    line-height: 300px;
+    margin-bottom: 50px;
+    background: url(../images/lecordonbleu/campusbrochure.jpg) 50% 50%, rgb(104, 101, 101);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.brochure {
+    flex-direction: column;
+}
+.b3 > .document{
+    width: 100%;
+    overflow-x: scroll;
+}
+.brochure > div{
+    width: 100%;
+}
+.bc{
+    width: 100%;
+    word-break: keep-all;
+    text-align: center;
+    padding: 20px;
+}
+.document .bc{
+    flex-shrink: 0;
+}
+.brochurecheck {
+    width: 90%;
+}
+

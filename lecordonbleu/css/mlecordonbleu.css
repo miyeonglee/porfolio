@@ -32,10 +32,13 @@ h3{
     width: 280px;
     height: 500px;
     font-size: 12px;
+}
+.notice h2{
     word-break: keep-all;
 }
 .noticetext{
     overflow-y: scroll;
+    text-align: justify;
 }
 /* campus */
 .campusGate, .campus{

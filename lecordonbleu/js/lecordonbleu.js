@@ -20,7 +20,7 @@ $(document).ready(function () {
   $('#closeCheck').click(function () {
     $('.notice').css('display', 'none');
   });
-
+  
   $("#draggable").draggable();
 
 
@@ -196,6 +196,69 @@ var swiper3 = new Swiper('.swiper-container.inews', {
 
 
 
+
+
+
+// 유효성 검사
+
+var email = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i);
+var pass = RegExp(/^\d{3}-\d{3,4}-\d{4}$/);
+var named = RegExp(/^[가-힣]+$/);
+
+
+$("#name").keyup(function () {
+  // 이름 공백 확인
+  if ($("#name").val() == "") {
+      $("#namelog").text("이름을 입력해주세요");
+      $("#name").focus();
+      return false;
+  }    //이름 유효성 검사
+  else if (!named.test($("#name").val())) {
+      $("#namelog").text("이름형식에 맞게 입력해주세요");
+      $("#name").focus();
+      return false;
+  }
+  else { // 합당한 경우
+    $("#namelog").text("");
+}
+});
+
+// 전화번호 유효성 검사
+$("#tel").keyup(function () {
+  // 전화번호 공백 확인
+  if ($("#tel").val() == "") {
+      $("#tellog").text("전화번호를 입력해주세요");
+      $("#tel").focus();
+      return false;
+  }
+  // 전화번호 정규식으로 테스트
+  else if (!pass.test($("#tel").val())) {
+      $("#tellog").text("형식에 맞게 입력해주세요");
+      $("#tel").focus();
+      return false;
+  } else { // 합당한 경우
+      $("#tellog").text("");
+  }
+});
+
+
+//이메일 유효성 검사
+$("#email").keyup(function () {
+  //이메일 공백 검사
+  if ($("#email").val() == "") {
+      $("#emaillog").text("이메일을 입력 해주세요");
+      $("#email").focus();
+      return false;
+  }
+  //이메일 유효성 검사
+  else if (!email.test($("#email").val())) {
+      $("#emaillog").text("이메일형식에 맞게 입력해주세요");
+      $("#email").focus();
+      return false;
+  } else { // 서로 맞는경우
+      $("#emaillog").text("");
+  }
+});
 
 
 

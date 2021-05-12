@@ -626,10 +626,15 @@
                 </div>
             </div>
             <form class="formopen">
-                <p><input type="text" id="first-name" placeholder="성" title="성 입력"></p>
-                <p><input type="text" id="name" placeholder="이름" title="이름 입력"></p>
-                <p><input type="email" id="email" placeholder="이메일" title="이메일 입력"></p>
-                <p><input type="tel" id="tel" placeholder="전화번호" title="전화번호 입력"></p>
+                <p><input type="text" id="name" autocomplete="off" placeholder="이름" title="이름 입력">
+                    <span id="namelog" class="alert"></span>
+                </p>
+                <p><input type="tel" id="tel" maxlength="13" placeholder="전화번호" title="전화번호 입력">
+                    <span id="tellog" class="alert"></span>
+                </p>
+                <p><input type="email" id="email" autocomplete="off" placeholder="이메일" title="이메일 입력">
+                    <span id="emaillog" class="alert"></span>
+                </p>
                 <p>문의사항
                     <select>
                         <option selected="selected">기타</option>

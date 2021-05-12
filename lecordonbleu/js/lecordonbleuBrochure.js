@@ -15,94 +15,68 @@ $(window).scroll(function () {
 });
 
 //체크박스
+
 function getCheckboxValue()  {
+
   // 선택된 목록 가져오기
   const query = 'input[name="brochure"]:checked';
   const selectedEls = 
       document.querySelectorAll(query);
-  
+
   // 선택된 목록에서 value 찾기
   let result = '';
   selectedEls.forEach((el) => {
-    result += el.value + '<br>';
+    result += el.value + '<br><br>';
   });
-  
+
   // 출력
   document.getElementById('result').innerHTML
     = result;
+
 }
-
-
 
 // 유효성 검사
-$("#first-name").keyup(function () {
-  // 성 공백 확인
-  if ($("#first-name").val() == "") {
-      $("#firstnamelog").text("성을 입력해주세요");
-      $("#first-name").focus();
-      return false;
-  }else { // 합당한 경우
-    $("#pwlog").text("");
-}
-});
+
+var email = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i);
+var pass = RegExp(/^\d{3}-\d{3,4}-\d{4}$/);
+var named = RegExp(/^[가-힣]+$/);
+
+
 $("#name").keyup(function () {
   // 이름 공백 확인
   if ($("#name").val() == "") {
       $("#namelog").text("이름을 입력해주세요");
       $("#name").focus();
       return false;
-  }else { // 합당한 경우
-    $("#pwlog").text("");
+  }    //이름 유효성 검사
+  else if (!named.test($("#name").val())) {
+      $("#namelog").text("이름형식에 맞게 입력해주세요");
+      $("#name").focus();
+      return false;
+  }
+  else { // 합당한 경우
+    $("#namelog").text("");
 }
 });
 
-
-
-
-
-
-// 비밀번호 유효성 검사
-$("#pw").keyup(function () {
-  // 비밀번호 공백 확인
-  if ($("#pw").val() == "") {
-      $("#pwlog").text("비밀번호를 입력해주세요");
-      $("#pw").focus();
+// 전화번호 유효성 검사
+$("#tel").keyup(function () {
+  // 전화번호 공백 확인
+  if ($("#tel").val() == "") {
+      $("#tellog").text("전화번호를 입력해주세요");
+      $("#tel").focus();
       return false;
   }
-  // 아이디와 비밀번호를 동일하게 쓴 경우
-  else if ($("#id").val() == $("#pw").val()) {
-      $("#pwlog").text("아이디와 비밀번호가 같습니다");
-      $("#pw").val("");
-      $("#pw").focus();
-      return false;
-  }
-  // 비밀번호 정규식으로 테스트
-  else if (!pass.test($("#pw").val())) {
-      $("#pwlog").text("형식에 맞게 입력해주세요");
-      $("#pw").focus();
+  // 전화번호 정규식으로 테스트
+  else if (!pass.test($("#tel").val())) {
+      $("#tellog").text("형식에 맞게 입력해주세요");
+      $("#tel").focus();
       return false;
   } else { // 합당한 경우
-      $("#pwlog").text("");
+      $("#tellog").text("");
   }
 });
-// 비밀번호 확인란 유효성 검사
-$("#checkpw").keyup(function () {
-  // 비밀번호 확인란 공백 확인
-  if ($("#checkpw").val() == "") {
-      $("#checkpwlog").text("비밀번호 확인란을 입력해주세요");
-      $("#checkpw").focus();
-      return false;
-  }
-  // 비밀번호 서로확인
-  else if ($("#pw").val() != $("#checkpw").val()) {
-      $("#checkpwlog").text("비밀번호가 상이합니다");
-      // $("#checkpw").val("");
-      $("#checkpw").focus();
-      return false;
-  } else { // 서로 맞는경우
-      $("#checkpwlog").text("");
-  }
-});
+
 
 //이메일 유효성 검사
 $("#email").keyup(function () {
@@ -115,7 +89,6 @@ $("#email").keyup(function () {
   //이메일 유효성 검사
   else if (!email.test($("#email").val())) {
       $("#emaillog").text("이메일형식에 맞게 입력해주세요");
-      // $("#email").val("");
       $("#email").focus();
       return false;
   } else { // 서로 맞는경우
@@ -123,21 +96,27 @@ $("#email").keyup(function () {
   }
 });
 
-//이름 유효성 검사
-$("#name").keyup(function () {
-  //이름 공백 검사
-  if ($("#name").val() == "") {
-      $("#namelog").text("이름을 입력해주세요");
-      $("#name").focus();
-      return false;
-  }
-  //이름 유효성 검사
-  else if (!named.test($("#name").val())) {
-      $("#namelog").text("이름형식에 맞게 입력해주세요");
-      // $("#name").val("");
-      $("#name").focus();
-      return false;
-  } else { // 서로 맞는경우
-      $("#namelog").text("");
-  }
+
+//전송버튼 유효성
+
+
+
+$('.button').click(function () {
+
+  var chkd = $(".bc input").is(":checked");
+  if (!chkd) {
+    $("#buttonlog").text("안내 책자를 선택해주세요");
+  } else if ($("#name").val() == "") {
+    $("#buttonlog").text("이름을 입력 해주세요");
+    $("#name").focus();
+}  else if ($("#tel").val() == "") {
+  $("#buttonlog").text("전화번호를 입력 해주세요");
+  $("#tel").focus();
+}else if ($("#email").val() == "") {
+  $("#buttonlog").text("이메일을 입력 해주세요");
+  $("#email").focus();
+} else{
+  $("#buttonlog").text("");
+}
+
 });
