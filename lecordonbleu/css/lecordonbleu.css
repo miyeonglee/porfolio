@@ -75,6 +75,9 @@ html {
 .notice > *{
     margin: 10px 0;
 }
+.noticetext{
+    margin: 10px 0;
+}
 .notice_close{
     width: 80%;
     display: flex;
