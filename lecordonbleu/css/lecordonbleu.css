@@ -120,6 +120,9 @@ html {
     cursor: pointer;
 }
 /* campus */
+.mMap{
+    display: none;
+}
 .campus{
     background-color: rgb(24, 32, 48);
     display: flex;

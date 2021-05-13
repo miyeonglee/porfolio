@@ -21,6 +21,9 @@ h2{
     font-size: 1.5rem;
     margin: 50px 0;
 }
+h2::after{
+display: none;
+}
 h3{
     font-size: 1rem;
 }
@@ -41,9 +44,53 @@ h3{
     text-align: justify;
 }
 /* campus */
-.campusGate, .campus{
+.campusGate{
+    width: 100%;
+    padding: 10px;
+}
+.campus{
+    padding: 20px;
+}
+.campus h2 {
+    margin: 0;
+}
+.campus > .text > p {
+    font-size: 1rem;
+}
+.map {
     display: none;
 }
+.mMap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.mcampusbutton{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+
+}
+.mcampus{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.mcampus a{
+    color: white;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+
 
 
 /* 헤더 */
@@ -52,6 +99,7 @@ position: sticky;
     top: 0;
     background-color: white;
     z-index: 150;
+    border-bottom: 1px solid #ddd;
 }
 .header{
     height: 80px;
@@ -68,7 +116,6 @@ position: sticky;
 .mMenu {
     display: block;
     font-size: 25px;
-
 }
 nav{
     display: none;

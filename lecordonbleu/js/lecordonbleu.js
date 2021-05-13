@@ -30,6 +30,14 @@ $(document).ready(function () {
     $(".campus").slideToggle();
   });
   
+  $(".mcampus").hide();
+  $(".mcampusbutton").click(function () {
+    $(this).next().slideToggle();
+    $(".mcampus").not(this).next().hide();
+  });
+
+  
+
 
   $(".closemap").click(function () {
     $(".campusGate").hide();
