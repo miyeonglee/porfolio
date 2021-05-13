@@ -788,13 +788,6 @@ nav{
     flex-direction: column;
     align-items: center;
 }
-.se5 > .inner > div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-}
-
 .se5 form > *{
     margin-bottom: 10px;
 }
@@ -802,6 +795,11 @@ nav{
     font-size: 1rem;
 }
 .button{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
     width: 200px;
     height: 40px;
     border-radius: 30px;
@@ -810,7 +808,8 @@ nav{
 }
 .button:hover{
     color: rgb(24, 32, 48);
-    background-color: rgb(153, 152, 152);
+    background-color: rgb(234,231,220);
+    border: 2px solid rgb(24, 32, 48);
     transition: all 1s;
 }
 .personal{

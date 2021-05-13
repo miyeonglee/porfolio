@@ -31,15 +31,18 @@ h3{
     background-size: cover;
     background-blend-mode: multiply;
 }
+
+
+
 .brochure {
     flex-direction: column;
 }
-.b3 > .document{
-    width: 100%;
-    overflow-x: scroll;
-}
+
 .brochure > div{
     width: 100%;
+}
+.swiper-button-prev, .swiper-button-next{
+    display: block;
 }
 .bc{
     width: 100%;
@@ -47,10 +50,30 @@ h3{
     text-align: center;
     padding: 20px;
 }
-.document .bc{
-    flex-shrink: 0;
-}
+
 .brochurecheck {
     width: 90%;
 }
+#result {
+    font-size: 1.2rem;
+    word-break: keep-all;
+}
+.brochurecheck .text {
+    padding: 25px 0;
+}
+#join{
+    width: 95%;
+    padding: 15px 5px;
+    margin: 10px auto;
+}
+#join > div input {
+    width: 100%;
+}
+#join > div p {
+    font-size: 0.9rem;
+}
+#join > div {
+    margin: 10px;
+}
+
 

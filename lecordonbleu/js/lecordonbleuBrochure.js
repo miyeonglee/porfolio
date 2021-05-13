@@ -14,6 +14,50 @@ $(window).scroll(function () {
   }
 });
 
+
+
+// 폰트 사이트 조절
+function getSize() {
+  size = $( "form" ).css( "font-size" );
+  size = parseInt(size, 10);
+}
+//get inital font size
+getSize();
+$( "#up" ).on( "click", function() {
+  // parse font size, if less than 50 increase font size
+  if ((size + 2) <= 50) {
+    $( "form" ).css( "font-size", "+=2" );
+  }
+});
+
+$( "#down" ).on( "click", function() {
+  if ((size - 2) >= 12) {
+    $( "form" ).css( "font-size", "-=2" );
+  }
+});
+
+
+//document swiper
+var iw = window.innerWidth;
+if (iw < 641) {
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  centeredSlides: true,
+  spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    }
+)};
+
+
+
+
 //체크박스
 
 function getCheckboxValue()  {
