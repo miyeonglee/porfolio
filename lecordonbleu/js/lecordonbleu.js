@@ -78,55 +78,41 @@ $(document).ready(function () {
   });
 
 
-  $(".se1 > .youtube").click(function () {
-    $(".se1 > iframe").toggleClass("on");
-  });
-
-  $(".se5 .online").click(function () {
-    $(".se5 .open, .se5 .formopen").toggleClass("on");
-    $(".personal").find(".pb").removeClass("on");
-  });
-
-  $(".se5 .pb").click(function () {
-    $(this).toggleClass("on");
-    $(".se5 .pb").not(this).removeClass("on");
-    return false;
-  });
+  // $(".se1 > .youtube").click(function () {
+  //   $(".se1 > iframe").toggleClass("on");
+  // });
 
 
+  var embed = $('#youtubeplayer'); //동영상 코드
 
+  $('.youtube').on('click', function () { //레이어 열때
+    var path = $(this).attr('href');
+    $('.iy').append(embed);
+    $(path).show();
+  })
 
-
-  $(".ffoo > li > div").click(function () {
-    $(this).next().toggleClass("on");
-    $(".ffoo > li > div").not(this).next().removeClass("on");
-    $(".fo").find("span").removeClass("on");
-    return false;
-  });
-
-  $(".fo > div").click(function () {
-    $(this).siblings().toggleClass("on");
-    $(".ffoo").find(".sub").removeClass("on");
-    return false;
-  });
+  $('.close').on('click', function () { //레이어 닫을때
+    $(this).parents('#pop').hide();
+    $('.iy').empty();
+  })
 
 
 
-
+//프로그램
 
   $(".pprg > div").hover(function () {
     $(this).toggleClass("on");
     $(".pprg > div").not(this).removeClass("on");
   });
 
-  $(window).resize(function () {
-    if ($(window).width() < 641) {
-      $(".pprg > div").click(function () {
-        $(this).children(".firstp").toggleClass("on");
-        $(".pprg > div").not(this).children(".firstp").removeClass("on");
-      });
-    }
-  });
+  // $(window).resize(function () {
+  //   if ($(window).width() < 641) {
+  //     $(".pprg > div").click(function () {
+  //       $(this).children(".firstp").toggleClass("on");
+  //       $(".pprg > div").not(this).children(".firstp").removeClass("on");
+  //     });
+  //   }
+  // });
 
   // top버튼
   $(".top").hide();
@@ -156,18 +142,7 @@ $(document).ready(function () {
 
 
 
-  var embed = $('#youtubeplayer'); //동영상 코드
 
-  $('.youtube').on('click', function () { //레이어 열때
-    var path = $(this).attr('href');
-    $('.iy').append(embed);
-    $(path).show();
-  })
-
-  $('.close').on('click', function () { //레이어 닫을때
-    $(this).parents('#pop').hide();
-    $('.iy').empty();
-  })
 
 
 });
@@ -205,6 +180,20 @@ var swiper3 = new Swiper('.swiper-container.inews', {
     }
   },
 });
+
+$(".se5 .online").click(function () {
+  $(".se5 .open, .se5 .formopen").toggleClass("on");
+  $(".personal").find(".pb").removeClass("on");
+});
+
+$(".se5 .pb").click(function () {
+  $(this).toggleClass("on");
+  $(".se5 .pb").not(this).removeClass("on");
+  return false;
+});
+
+
+
 
 
 
@@ -274,3 +263,16 @@ $("#email").keyup(function () {
 
 
 
+
+$(".ffoo > li > div").click(function () {
+  $(this).next().toggleClass("on");
+  $(".ffoo > li > div").not(this).next().removeClass("on");
+  $(".fo").find("span").removeClass("on");
+  return false;
+});
+
+$(".fo > div").click(function () {
+  $(this).siblings().toggleClass("on");
+  $(".ffoo").find(".sub").removeClass("on");
+  return false;
+});

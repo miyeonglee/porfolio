@@ -596,22 +596,22 @@ nav{
 }
 .pprg > div{
     position: relative;
+    border-radius: 6px;
 }
 .pprg > div p{
     display: none;
 }
-
 .pprg > .long{
     width: 730px;
     height: 250px;
     padding: 40px;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 .pprg > .short{
     width: 350px;
     height: 250px;
     padding: 30px;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 .pprg .pbutton{
     width: 30px;
@@ -634,7 +634,7 @@ nav{
 }
 
 .pprg > div:hover{
-    border-radius: 10px;
+    border-radius: 0;
     box-shadow: 5px 10px 10px rgb(153, 152, 152);
     background-blend-mode: multiply;
     color: white;
