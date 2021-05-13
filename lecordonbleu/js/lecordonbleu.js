@@ -44,10 +44,14 @@ $(document).ready(function () {
   $(".mMenu").click(function () {
     $("nav").addClass("on");
     $(".top").hide();
+    $(".quickmenu").hide();
+
   });
   $(".mX").click(function () {
     $("nav").removeClass("on");
     $(".top").show();
+    $(".quickmenu").show();
+
   });
 
 
