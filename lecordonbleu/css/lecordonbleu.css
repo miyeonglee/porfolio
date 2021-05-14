@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+
+
 
 
 *{
@@ -51,9 +53,7 @@ p{
     line-height: 1.4;
     font-size: 1.2rem;
 }
-html {
-    scroll-behavior: smooth;
-}
+
 
 /* 코로나 관련 공지사항 */
 .notice{
@@ -586,7 +586,7 @@ nav{
     display: flex;
     flex-direction: column;
 }
-.pprg{
+.prgbox{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -594,26 +594,22 @@ nav{
     margin: 20px auto;
     color: white;
 }
-.pprg > div{
+.prgbox > div{
     position: relative;
-    border-radius: 6px;
 }
-.pprg > div p{
-    display: none;
-}
-.pprg > .long{
+.prgbox > .long{
     width: 730px;
     height: 250px;
     padding: 40px;
-    transition: all 1s;
+    transition: all 0.5s;
 }
-.pprg > .short{
+.prgbox > .short{
     width: 350px;
     height: 250px;
     padding: 30px;
-    transition: all 1s;
+    transition: all 0.5s;
 }
-.pprg .pbutton{
+.pbutton{
     width: 30px;
     height: 30px;
     color: white;
@@ -629,38 +625,48 @@ nav{
     overflow: hidden;
     display: none;
 }
-.pprg .pbutton span{
+.pbutton span{
+    opacity: 0;
+    width: 0;
+}
+.prgbox div p{
     display: none;
 }
 
-.pprg > div:hover{
-    border-radius: 0;
+/* hover하면 - on */
+.prgbox > div.on{
+    border-radius: 10px;
     box-shadow: 5px 10px 10px rgb(153, 152, 152);
     background-blend-mode: multiply;
     color: white;
     transform: translate(-10px, -10px);
 }
-.pprg > div:hover .pbutton{
+.prgbox > div.on .pbutton{
     display: flex;
     justify-content: center;
 }
-.pprg > div:hover h3{
+.prgbox > div.on h3{
     margin-bottom: 15px;
 }
-.pprg > div:hover p{
+.prgbox > div.on p{
     display: flex;
     text-align: justify;
 }
-.pbutton:hover{
+
+/* pbutton.on */
+.pbutton.on{
     width: 120px;
     padding: 0 5px;
     justify-content: space-between!important;
     border-radius: 15px;
     transition: width 0.5s;
 }
-.pbutton:hover span{
-    display: flex;
+.pbutton.on span{
+    width: auto;
+    opacity: 1;
+    transition: all 3.5s;
 }
+
 .p01{
     background: url(../images/lecordonbleu/64478.jpg) 50% 45%, #9A9A9A;
     background-size: cover;
@@ -852,6 +858,7 @@ textarea{
 .open.on{
     display: flex!important;
 }
+
 .formopen.on{
     display: block!important;
 }

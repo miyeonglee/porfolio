@@ -1,24 +1,8 @@
-//캠퍼스
-$(".campus").hide();
-$(".campusbutton").click(function () {
-  $(".campus").fadeToggle();
-});
-
-  // top버튼
-$(".top").hide();
-$(window).scroll(function () {
-  if ($(this).scrollTop() > $("header").height()) {
-    $(".top").fadeIn("swing");
-  } else {
-    $(".top").fadeOut("swing");
-  }
-});
-
 
 
 // 폰트 사이트 조절
 function getSize() {
-  size = $( "form" ).css( "font-size" );
+  size = $( "form > *" ).css( "font-size" );
   size = parseInt(size, 10);
 }
 //get inital font size
@@ -26,13 +10,13 @@ getSize();
 $( "#up" ).on( "click", function() {
   // parse font size, if less than 50 increase font size
   if ((size + 2) <= 50) {
-    $( "form" ).css( "font-size", "+=2" );
+    $( "form > *" ).css( "font-size", "+=2" );
   }
 });
 
 $( "#down" ).on( "click", function() {
   if ((size - 2) >= 12) {
-    $( "form" ).css( "font-size", "-=2" );
+    $( "form > *" ).css( "font-size", "-=2" );
   }
 });
 

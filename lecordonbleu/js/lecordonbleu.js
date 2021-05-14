@@ -1,5 +1,4 @@
 
-$(document).ready(function () {
 
 
   // 공지 팝업창
@@ -70,6 +69,17 @@ $(document).ready(function () {
   });
  
 
+  //퀵메뉴
+  var iw = window.innerWidth;
+  if (iw < 641) {
+    $(".quickmenu > a").hide();
+    $(".quickmenu > div").click(function () {
+      $(".quickmenu > a").slideToggle();
+    });
+  }
+  
+
+
   // visual section
   var swiper1 = new Swiper('.swiper-container.visual', {
     spaceBetween: 30,
@@ -77,10 +87,6 @@ $(document).ready(function () {
     autoplay: true,
   });
 
-
-  // $(".se1 > .youtube").click(function () {
-  //   $(".se1 > iframe").toggleClass("on");
-  // });
 
 
   var embed = $('#youtubeplayer'); //동영상 코드
@@ -99,20 +105,24 @@ $(document).ready(function () {
 
 
 //프로그램
-
-  $(".pprg > div").hover(function () {
-    $(this).toggleClass("on");
-    $(".pprg > div").not(this).removeClass("on");
+if (iw > 640) {
+  $(".prgbox > div").hover(function () {
+    $(".prgbox > div").toggleClass("on");
+    $(".prgbox > div").not(this).removeClass("on");
   });
+}else{
+    $(".prgbox > div").click(function () {
+      $(".prgbox > div").toggleClass("on");
+      $(".mremove").hide(); 
+      $(".prgbox > div").not(this).removeClass("on");
+    }
+)};
 
-  // $(window).resize(function () {
-  //   if ($(window).width() < 641) {
-  //     $(".pprg > div").click(function () {
-  //       $(this).children(".firstp").toggleClass("on");
-  //       $(".pprg > div").not(this).children(".firstp").removeClass("on");
-  //     });
-  //   }
-  // });
+if (iw > 640) {
+  $(".pbutton").hover(function () {
+    $(".pbutton").toggleClass("on");
+  });
+}
 
   // top버튼
   $(".top").hide();
@@ -124,10 +134,10 @@ $(document).ready(function () {
     }
   });
 
-
-
-
-
+  $( '.top' ).click( function() {
+    $( 'html, body' ).animate( { scrollTop : 0 }, 1000 );
+    return false;
+  } );
 
 
   var lastWidth = $(window).width();
@@ -140,12 +150,6 @@ $(document).ready(function () {
   });
 
 
-
-
-
-
-
-});
 
 
 

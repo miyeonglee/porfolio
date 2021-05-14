@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 body{
     min-width: 320px;
 }
@@ -220,14 +220,36 @@ nav.on{
     margin: 30px 25px;
 }
 .msearch > span {
-    margin: 0 30px;
+    margin: 0 40px;
 }
 
 /* quickmenu */
 .quickmenu{
     right: 0;
 }
+.quickmenu > div{
+    width: 60px;
+    border-radius: 50%;
+}
+.quickmenu > div span{
+    font-size: 0.8rem;
+}
+.quickmenu > a{
+    width: 60px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    margin: 2px 0;
+}
 
+/* top */
+.top{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    right: 0;
+}
 
 /* visual */
 .visual{
@@ -271,7 +293,7 @@ nav.on{
 
 
 /* 프로그램 */
-.pprg{
+.prgbox{
     width: auto;
 }
 .prg > div{
@@ -279,21 +301,16 @@ nav.on{
     flex-direction: row;
     overflow-y: scroll;
 }
-.pprg > div{
+.prgbox > div{
     margin: 0 10px;
 }
-
-.pprg > div .firstp.on{
-    display: flex;
-}
-.pprg > .long{
+.prgbox > .long{
     width: 300px;
+    height: 280px;
 }
-.pprg > .short{
+.prgbox > .short{
     width: 300px;
-}
-.pprg .pbutton{
-    display: flex;
+    height: 280px;
 }
 /* .se3 */
 .se3 > h2{
@@ -305,20 +322,6 @@ nav.on{
 .img {
     margin: 0 0 20px 0;
 }
-
-
-
-
-
-/* top */
-.top{
-    width: 50px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    right: 0;
-}
-
 
 
 /* se5 */
@@ -352,7 +355,11 @@ textarea{
     width: 100%;
     height: 300px;
 }
-
+.notice5{
+    width: auto;
+    padding: 10px;
+    text-align: justify;
+}
 
 
 
