@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 body{
-    min-width: 320px;
+    min-width: 641px;
 }
 *{
     margin:0;
@@ -25,15 +25,15 @@ h2::after{
 display: none;
 }
 h3{
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 /* 코로나 관련 공지사항 */
 .notice{
     top: 10px;
     left: 15px;
-    width: 280px;
-    height: 500px;
+    width: 400px;
+    height: 600px;
     font-size: 12px;
 }
 .notice h2{
@@ -49,13 +49,14 @@ h3{
     padding: 10px;
 }
 .campus{
-    padding: 20px;
+    padding: 20px 40px;
 }
 .campus h2 {
     margin: 0;
 }
 .campus > .text > p {
     font-size: 1rem;
+    margin-bottom: 10px;
 }
 .map {
     display: none;
@@ -85,28 +86,25 @@ h3{
 .mcampus a{
     color: white;
     text-decoration: none;
-    height: 30px;
-    line-height: 30px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2rem;
 }
-
-
-
 
 /* 헤더 */
 header{
-position: sticky;
+    position: sticky;
     top: 0;
     background-color: white;
     z-index: 150;
     border-bottom: 1px solid #ddd;
 }
 .header{
-    height: 65px;
+    height: 100px;
     padding: 0 10px;
-
 }
 .header .logo{
-    width: 200px;
+    width: 300px;
     height: 100%;
 }
 .header .search{
@@ -131,7 +129,7 @@ nav.on{
     height: 100%;
     color: white;
     background-color: rgb(24, 32, 48);
-    padding: 10px;
+    padding: 40px;
     overflow: scroll;
 }
 .mX{
@@ -146,24 +144,24 @@ nav.on{
     margin: 10px;
     align-items: center;
     justify-content: center;
-    width: 170px;
-    height: 50px;
+    width: 300px;
+    height: 60px;
+    font-size: 1.2rem;
 }
 .mform input{
-    width: 130px;
-    height: 25px;
+    width: 200px;
+    height: 35px;
     margin-right: 10px;
 }
-
 .mlangbutton{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 .mlangbutton > div{
-    width: 100px;
-    height: 30px;
-    line-height: 30px;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     border: 1px solid #ddd;
     margin: 0 2px;
@@ -185,8 +183,8 @@ nav.on{
 .menu > li div{
     color: white;
     width: 100%;
-    height: auto;
-    /* line-height: 55px; */
+    height: 90px;
+    line-height: 90px;
 }
 
 .menu > li .sub_menu{
@@ -213,12 +211,14 @@ nav.on{
 .msearch {
     /* display: flex; */
     /* justify-content: space-between; */
+    font-size: 20px;
     margin: 30px 25px;
 }
 .msearch > span {
-    font-size: 20px;
     margin: 0 40px;
+    font-size: 35px;
 }
+
 
 /* quickmenu */
 .quickmenu{
@@ -251,24 +251,23 @@ nav.on{
 /* visual */
 .visual{
     width: 100%;
-    height: 400px;
+    height: 500px;
     word-break: keep-all;
 }
-.visual h1{
+/* .visual h1{
     font-size: 1.8rem;
     margin-bottom: 20px;
 }
 .visual .swiper-slide{
     padding: 150px 20px;
     text-align: center;
-}
-
+} */
 
 /* se1 섹션 */
 
 .se1 iframe{
     width:100%;
-    height:300px;
+    height:500px;
 }
 .se1 > p{
     text-align: center;
@@ -278,18 +277,15 @@ nav.on{
     margin-bottom: 30px;
 }
 .popup {
-    width: 100%;
-    height: 300px;
-
-  }
+    width: 90%;
+    height: 500px;}
 
 .popup .close {
     right: 0;
     top: -45px;
-  }
+}
 
-
-/* 프로그램 */
+  /* 프로그램 */
 .prgbox{
     width: auto;
 }
@@ -302,14 +298,15 @@ nav.on{
     margin: 0 10px;
 }
 .prgbox > .long{
-    width: 300px;
-    height: 280px;
+    width: 400px;
+    height: 300px;
 }
 .prgbox > .short{
-    width: 300px;
-    height: 280px;
+    width: 400px;
+    height: 300px;
 }
-/* .se3 */
+
+/* se3 */
 .se3 > h2{
     margin-bottom: 30px;
 }
@@ -319,13 +316,14 @@ nav.on{
 .img {
     margin: 0 0 20px 0;
 }
+
 .img > div.on .newstext {
     padding: 30px  20px;
 }
 
 /* se4 */
 .se4{
-    padding: 5px;
+    padding: 20px;
 }
 .se4 > .inner{
     width: 80%;
@@ -336,6 +334,12 @@ nav.on{
     border-radius: 30px;
     background-color: rgb(152,136,84);
     margin: 20px 0;
+}
+.formopen input{
+    height: 30px;
+}
+.se4 form > * {
+    margin: 5px 0;
 }
 .personal{
     width: 100%;
@@ -360,11 +364,6 @@ textarea{
     text-align: justify;
 }
 
-
-
-
-
-
 /* footer */
 footer{
     height: auto;
@@ -378,43 +377,13 @@ footer{
 }
 .footer > .right{
     display: flex;
-    flex-direction: column;
-}
-.lcb{
-    display: flex;
-    flex-direction: column;
-}
-.lcb > div > i{
-    display: flex;
-}
-.lcb > div{
-    border-top: 1px solid rgb(64, 72,87);
-    border-bottom: 1px solid rgb(64, 72,87);
-    color: white;
-    line-height: 45px;
-    width: 100%;
-    height: 45px;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
 }
-.lcb > span{
+
+.right > li{
     width: 100%;
-    height: 40px;
-    line-height: 40px;
-    color: rgb(64, 72,87);
-    border-bottom: 1px solid rgb(64, 72,87);
-    padding-left: 5px;
-}
-.lcb > span::before{
-    display: none;
-}
-.lcb > span{
-    display: none;
-}
-.lcb > span.on{
-    display: flex;
+    margin: 0 5px;
 }
 .right > li div{
     width: 100%;
@@ -434,5 +403,4 @@ footer{
 .snsicon{
     margin-bottom:10px;
     width: 100%;
-    justify-content: space-evenly;
 }

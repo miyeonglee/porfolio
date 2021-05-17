@@ -58,23 +58,22 @@
     $("nav").removeClass("on");
     $(".top").show();
     $(".quickmenu").show();
-
   });
 
 
-  $(".menu > li > a").click(function () {
+  $(".menu > li > div").click(function () {
     $(this).next().toggleClass("on");
-    $(".menu > li > a").not(this).next().removeClass("on");
+    $(".menu > li > div").not(this).next().removeClass("on");
     return false;
   });
  
 
   //퀵메뉴
   var iw = window.innerWidth;
-  if (iw < 641) {
-    $(".quickmenu > a").hide();
+  if (iw < 1081) {
+    $(".quickmenu .quick").hide();
     $(".quickmenu > div").click(function () {
-      $(".quickmenu > a").slideToggle();
+      $(".quickmenu .quick").slideToggle();
     });
   }
   
@@ -105,7 +104,7 @@
 
 
 //프로그램
-if (iw > 640) {
+if (iw > 1081) {
   $(".prgbox > div").hover(function () {
     $(".prgbox > div").toggleClass("on");
     $(".prgbox > div").not(this).removeClass("on");
@@ -118,7 +117,7 @@ if (iw > 640) {
     }
 )};
 
-if (iw > 640) {
+if (iw > 1081) {
   $(".pbutton").hover(function () {
     $(".pbutton").toggleClass("on");
   });
@@ -153,12 +152,6 @@ if (iw > 640) {
 
 
 
-
-
-
-
-
-
 // 스와이퍼
 
 
@@ -178,21 +171,42 @@ var swiper3 = new Swiper('.swiper-container.inews', {
     el: '.swiper-pagination',
     clickable: true,
   },
+
   breakpoints: {
-    640: {
+    641: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1081: {
       slidesPerView: 3,
+      spaceBetween: 10,
     }
   },
 });
 
-$(".se5 .online").click(function () {
-  $(".se5 .open, .se5 .formopen").toggleClass("on");
+if (iw > 1081) {
+  $(".img > div").hover(function () {
+    $(".img > div").toggleClass("on");
+    $(".img > div").not(this).removeClass("on");
+  });
+}else{
+    $(".img > div").click(function () {
+      $(".img > div").toggleClass("on");
+      $(".img > div").not(this).removeClass("on");
+    }
+)};
+
+
+
+
+$(".se4 .online").click(function () {
+  $(".se4 .open, .se4 .formopen").toggleClass("on");
   $(".personal").find(".pb").removeClass("on");
 });
 
-$(".se5 .pb").click(function () {
+$(".se4 .pb").click(function () {
   $(this).toggleClass("on");
-  $(".se5 .pb").not(this).removeClass("on");
+  $(".se4 .pb").not(this).removeClass("on");
   return false;
 });
 
@@ -268,15 +282,15 @@ $("#email").keyup(function () {
 
 
 
-$(".ffoo > li > div").click(function () {
+$(".right > li > div").click(function () {
   $(this).next().toggleClass("on");
-  $(".ffoo > li > div").not(this).next().removeClass("on");
-  $(".fo").find("span").removeClass("on");
+  $(".right > li > div").not(this).next().removeClass("on");
+  $(".lcb").find("span").removeClass("on");
   return false;
 });
 
-$(".fo > div").click(function () {
+$(".lcb > div").click(function () {
   $(this).siblings().toggleClass("on");
-  $(".ffoo").find(".sub").removeClass("on");
+  $(".right").find(".sub").removeClass("on");
   return false;
 });

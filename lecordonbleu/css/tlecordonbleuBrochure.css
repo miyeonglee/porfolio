@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body{
-    min-width: 320px;
+    min-width: 641px;
 }
 *{
     margin:0;
@@ -21,7 +21,6 @@ h3{
     font-size: 1rem;
 }
 
-
 /* .section */
 .visual{
     height: 300px;
@@ -31,20 +30,32 @@ h3{
     background-size: cover;
     background-blend-mode: multiply;
 }
-.brochure {
+/* .brochure {
     flex-direction: column;
-}
-.brochure > div{
-    width: 100%;
+    margin: 0 auto;
+} */
+/* .b3{
+    width: 400px;
+    margin: 0 auto;
+} */
+/* .swiper-slide .bc{
+    width: 400px;
+} */
+.b3 .swiper-wrapper{
+    width: 60%;
+    overflow-x: scroll;
+    margin:  0 auto;
 }
 .swiper-button-prev, .swiper-button-next{
     display: block;
 }
 .bc{
-    width: 100%;
+    width: 400px;
+ 
+    /* margin: 0 auto; */
     word-break: keep-all;
-    text-align: center;
-    padding: 20px;
+    /* text-align: center; */
+    /* padding: 20px; */
 }
 
 .brochurecheck {
@@ -55,7 +66,7 @@ h3{
     word-break: keep-all;
 }
 .brochurecheck .text {
-    padding: 25px 0;
+    padding: 10px 0;
 }
 #join{
     width: 95%;
