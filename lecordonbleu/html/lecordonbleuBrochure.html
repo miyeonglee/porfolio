@@ -19,7 +19,456 @@
 </head>
 
 <body>
+    <div id="draggable" class="ui-widget-content notice">
+        <h2>코로나19 관련 공지사항</h2>
+        <div class="noticetext">
+            <p>
+                1. 최근 2주 기간 내 해외 방문, COVID-19 확진자 접촉, 집단감염이 발생한 장소를 방문하셨거나 감기와 유사한 증상이 있으신 경우 아카데미로 연락 바랍니다.
+            </p>
+            <p>2. 시연 시 제품 시식은 불가하나 개별적으로 용기를 갖고 오셔서 담아 가시는 것은 허용됩니다. 실습실에서 시식 또한 불가합니다.
+            </p>
+            <p>3. 아카데미 내부에서 식사는 살롱 및 6층 엘리베이터 앞 칸막이가 되어 있는 자리에서만 가능합니다. (지하 1층을 비롯하여 다른 층에서는 불가합니다.) 점심시간에는 숙명여대 외부에 있는
+                식당을
+                이용 부탁드립니다. 외부에 나가실 때는 반드시 유니폼 및 조리화는 라커에 두시고 환복하신 후에 외출하시기 바랍니다.
+            </p>
+            <p>4. 이외 마스크 착용 및 손 씻기 등 COVID-19를 예방하기 위해 필요한 안전 수칙을 기본으로 실천해주시고 지켜주시기를 부탁드립니다.
+            </p>
+        </div>
+        <div class="notice_close">
+            <form>
+                <input type="checkbox" id="pop_day" />
+                <label for="pop_day">1일동안닫기</label>
+                <a href="#" class="btn_close">1일동안닫기</a>
+            </form>
+            <div id="closeCheck">close</div>
+        </div>
+    </div>
 
+    <div class="campusGate">
+        <span class="showmap">
+            국제 캠퍼스
+        </span>
+        <span class="closemap">
+            &times;
+        </span>
+    </div>
+
+    <section id="campus" class="campus">
+        <div class="text">
+            <h2>Location</h2>
+            <p>인터내셔널 사이트로 돌아가기</p>
+        </div>
+        <div class="mMap">
+            <div>
+                <div class="mcampusbutton">온라인</div>
+                <div  class="mcampus">
+                <a href="https://www.cordonbleu.edu/online/learning/en">온라인</a>
+                </div>
+            </div>
+            <div>
+                <div class="mcampusbutton">아시아</div>
+                <div class="mcampus">
+                <a href="https://www.cordonbleu.edu/seoul/introduction/ko">한국 서울</a>
+                <a href="https://www.cordonbleu.edu/shanghai/home/en">중국 상하이</a>
+                <a href="https://www.cordonbleu.edu/kaohsiung/home/zh-hant">대만 가오슝</a>
+                <a href="https://www.cordonbleu.edu/manila/home/en">필리핀 마닐라</a>
+                <a href="https://www.cordonbleu.edu/thailand/home/th">태국 방콕</a>
+                <a href="https://www.cordonbleu.edu/malaysia/home/en">말레이시아</a>
+                <a href="https://www.cordonbleu.edu/india/home/en">인도 구르가온</a>
+                <a href="https://www.cordonbleu.edu/lebanon/home/en">레바논 베이루트</a>
+            </div>
+            </div>
+            <div>
+                <div class="mcampusbutton">유럽</div>
+                <div  class="mcampus">
+                <a href="https://www.cordonbleu.edu/istanbul/home/en">터키 이스탄불</a>
+                <a href="https://www.cordonbleu.edu/madrid/inicio/es">스페인 마드리드</a>
+                <a href="https://www.cordonbleu.edu/paris/accueil/fr">프랑스 파리</a>
+                <a href="https://www.cordonbleu.edu/london/home/en">영국 런던</a>
+            </div>
+            </div>
+            <div>
+                <div class="mcampusbutton">북중미 및 남미</div>
+                <div class="mcampus">
+                <a href="https://www.cordonbleu.edu/ottawa/en">캐나다 오타와</a>
+                <a href="https://www.cordonbleu.edu/usa/home/en">미국</a>
+                <a href="https://www.cordonbleu.edu/mexico/inicio/mx">멕시코 멕시코시티</a>
+                <a href="https://www.cordonbleu.edu/peru/home/en">페루 리마</a>
+                <a href="https://www.cordonbleu.edu/sao-paulo/home/pt-br">브라질 상파울로</a>
+                <a href="https://www.cordonbleu.edu/rio-de-janeiro/home/pt-br">브라질 리우데자네이루</a>
+            </div>
+            </div>
+            <div>
+                <div class="mcampusbutton">오세아니아</div>
+                <div class="mcampus">
+                <a href="https://www.cordonbleu.edu/perth/home/en">호주 퍼스</a>
+                <a href="https://www.cordonbleu.edu/adelaide/home/en">호주 애들레이드</a>
+                <a href="https://www.cordonbleu.edu/melbourne/home/en">호주 멜버른</a>
+                <a href="https://www.cordonbleu.edu/sydney/home/en">호주 시드니</a>
+                <a href="https://www.cordonbleu.edu/brisbane/home/en">호주 브리즈번</a>
+                <a href="https://www.cordonbleu.edu/new-zealand/welcome-to-new-zealand/en">뉴질랜드 웰링턴</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="map">
+
+
+            <a href="https://www.cordonbleu.edu/online/learning/en" class="dot online d1">
+                <div>
+                    <p>Online</p>
+                    <p>Herengracht 28<br>
+                        Amsterdam , 1015 BL, Netherlands<br>
+                        Netherlands</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/seoul/introduction/ko" class="dot asia d2">
+                <div>
+                    <p>Seoul</p>
+                    <p>7th Fl., Continuing Education Bldg.
+                        Sookmyung Women's University, 100, Cheongpa-ro 47-gil
+                        Seoul , Yongsan-gu , 04310
+                        South Korea</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/shanghai/home/en" class="dot asia d3">
+                <div>
+                    <p>Shanghai</p>
+                    <p>Building 1, No.1458 South Pu Dong Road
+                        Shanghai , Shanghai , 200122
+                        China Mainland</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/kaohsiung/home/zh-hant" class="dot asia d4">
+                <div>
+                    <p>Kaohsiung</p>
+                    <p>No.1, Songhe Rd<br>
+                        Xiaogang Dist. , Kaohsiung , 81271<br>
+                        Taiwan Region</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/manila/home/en" class="dot asia d5">
+                <div>
+
+                    <p>Manila</p>
+                    <p>G/F George SK Ty Learning Innovation Wing, Areté, Ateneo de Manila University, Katipunan Avenue
+                        1108
+                        Quezon City
+                        Philippines</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/thailand/home/th" class="dot asia d6">
+                <div>
+                    <p>Thailand</p>
+                    <p>4, 4/5 Central Tower, 17th-19th Floor, CentralWorld,
+                        Ratchadamri Road, Pathumwan Subdistrict,
+                        Pathumwan District , Bangkok , 10330
+                        Thailand</p>
+                </div>
+            </a>
+
+            <a href="https://www.cordonbleu.edu/malaysia/home/en" class="dot asia d7">
+                <div>
+                    <p>Malaysia</p>
+                    <p>Sunway University
+                        No.5, Jalan Universiti,
+                        Sunway City , Selangor Darul Ehsan , 47500
+                        Malaysia</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/perth/home/en" class="dot oceania d8">
+                <div>
+                    <p>Perth</p>
+                    <p>25 Aberdeen Street
+                        Perth , Western Australia , 6000
+                        Australia</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/adelaide/home/en" class="dot oceania d9">
+                <div>
+                    <p>Adelaide</p>
+                    <p>Days Road
+                        Regency Park , South Australia , 5010
+                        Australia</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/melbourne/home/en" class="dot oceania d10">
+                <div>
+                    <p>Melbourne</p>
+                    <P>488 South Road
+                        Moorabbin , Victoria , 3189
+                        Australia</P>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/sydney/home/en" class="dot oceania d11">
+                <div>
+                    <p>Sydney</p>
+                    <p>250 Blaxland Road
+                        Ryde , New South Wales , 2112
+                        Australia</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/brisbane/home/en" class="dot oceania d12">
+                <div>
+                    <p>Brisbane</p>
+                    <p>111 Colchester Street
+                        South Bank , Queensland , 4101
+                        Australia</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/new-zealand/welcome-to-new-zealand/en" class="dot oceania d13">
+                <div>
+                    <p>New Zealand</p>
+                    <p>52 Cuba Street
+                        Te Aro , Wellington , 6011
+                        New Zealand</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/india/home/en" class="dot asia d14">
+                <div>
+                    <p>India</p>
+                    <p>G D Goenka Education City
+                        Sohna Gurgaon Road
+                        Sohna , Haryana
+                        India</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/lebanon/home/en" class="dot asia d15">
+                <div>
+                    <p>Lebanon</p>
+                    <p>Tabarja, Kfaryassine
+                        Main Road, BURJ on BAY Hotel
+                        Jounieh
+                        Lebanon</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/istanbul/home/en" class="dot asia d16">
+                <div>
+                    <p>Istanbul</p>
+                    <p>Özyeğin University, Çekmeköy Campus
+                        Nişantepe Mevkii, Orman Sokak, No:13
+                        Alemdağ, Çekmeköy , Istanbul , 34794
+                        Turkey</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/madrid/inicio/es" class="dot europe d17">
+                <div>
+                    <p>Madrid</p>
+                    <p>Ctra. Pozuelo-Majadahonda (M-515) Km. 1,800
+                        Pozuelo de Alarcón , Madrid , 28223
+                        Spain</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/paris/accueil/fr" class="dot europe d18">
+                <div>
+                    <p>Paris</p>
+                    <p>13-15 Quai André Citroën
+                        Paris , 75015
+                        France</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/london/home/en" class="dot europe d19">
+                <div>
+                    <p>London</p>
+                    <p>15 Bloomsbury Square
+                        London , WC1A2LS
+                        United Kingdom</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/ottawa/en" class="dot america d20">
+                <div>
+                    <p>Ottawa</p>
+                    <p>453 Laurier Avenue East
+                        Ottawa , Ontario , K1N 6R4
+                        Canada</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/usa/home/en" class="dot america d21">
+                <div>
+                    <p>USA</p>
+                    <p>1460 broadway New York, NY
+                        10036, United States
+                    </p>
+
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/mexico/inicio/mx" class="dot america d22">
+                <div>
+                    <p>Mexico</p>
+                    <p>Av. Lomas Anahuac No. 46
+                        Lomas Anahuac Huixquilucan
+                        Mexico , Edo. de Mex. , C.P. 52786
+                        Mexico</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/peru/home/en" class="dot america d23">
+                <div>
+                    <p>Peru</p>
+                    <p>Av. Nuñez de Balboa 530
+                        Miraflores , Lima , Lima 18
+                        Peru</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/sao-paulo/home/pt-br" class="dot america d24">
+                <div>
+                    <p>Sao Paulo</p>
+                    <p>Natingui Street, 862 1st Floor, Vila Madalena
+                        São Paulo , SP , 05443-001
+                        Brazil</p>
+                </div>
+            </a>
+            <a href="https://www.cordonbleu.edu/rio-de-janeiro/home/pt-br" class="dot america d25">
+                <div>
+                    <p>Rio de Janeiro</p>
+                    <p>Passagem Street, 179, Botafogo
+                        Rio de Janeiro , RJ , 22290-031
+                        Brazil</p>
+                </div>
+            </a>
+
+
+        </div>
+    </section>
+
+    <header>
+        <div class="inner header">
+            <a href="#" class="logo"></a>
+
+            <div class="search">
+                <div class="span">
+                    <a href="#" class="campusbutton">캠퍼스</a>
+                    <span>선택 과정 보기</span>
+                    <span>로그인</span>
+                </div>
+                <div class="form">
+                    <form>
+                        <input type="search">
+                    </form>
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <div class="langbutton">
+                    <span>KO</span>
+                    <span>EN</span>
+                </div>
+            </div>
+            <span class="mMenu"><i class="fas fa-bars"></i></span>
+
+        </div>
+
+    </header>
+
+    <nav>
+        <span class="mX"><i class="fas fa-times"></i></span>
+        <div class="mform">
+            <form>
+                <input type="search">
+            </form>
+            <i class="fas fa-search"></i>
+        </div>
+
+        <div class="mlangbutton">
+            <div>KO</div>
+            <div>EN</div>
+        </div>
+
+
+        <ul class="inner menu">
+            <li>
+                <div>서울</div>
+                <ul class="sub_menu">
+                    <li>서울 캠퍼스</li>
+                    <li>셰프 소개</li>
+                    <li>캠퍼스 시설</li>
+                    <li>연락처 및 찾아오시는 길</li>
+                </ul>
+            </li>
+            <li>
+                <div>르 꼬르동 블루</div>
+                <ul class="sub_menu">
+                    <li>국제 캠퍼스 소개</li>
+                    <li>역사</li>
+                    <li>회장 인사</li>
+                </ul>
+            </li>
+            <li>
+                <div>프로그램</div>
+                <ul class="sub_menu">
+                    <li>그랑 디플로마</li>
+                    <li>요리 디플로마</li>
+                    <li>제과 디플로마</li>
+                    <li>제빵 디플로마</li>
+                    <li>와인 & 음료 프로그램</li>
+                    <li>단기 프로그램</li>
+                </ul>
+            </li>
+            <li>
+                <div>입학 안내</div>
+                <ul class="sub_menu">
+                    <li>입학 안내</li>
+                    <li>국제학생 입학안내</li>
+                    <li>정규과정 일정</li>
+                    <li>등록금</li>
+                    <li>장학금</li>
+                    <li>FAQ</li>
+                    <li>해외캠퍼스 입학상담</li>
+                </ul>
+            </li>
+            <li>
+                <div>방문 예약</div>
+                <ul class="sub_menu">
+                    <li>개별 입학상담</li>
+                    <li>입학설명회</li>
+                    <li>요리&제과 참관수업</li>
+                </ul>
+            </li>
+            <li>
+                <div>동문 네트워크 & 취업 정보</div>
+                <ul class="sub_menu">
+                    <li>동문 커뮤니티</li>
+                    <li>동문 소개 및 인터뷰</li>
+                    <li>동문 구인 및 구직</li>
+                </ul>
+            </li>
+            <li>
+                <div>뉴스 & 이벤트</div>
+            </li>
+
+        </ul>
+
+
+        <div class="msearch">
+            <span class="material-icons mspan">
+                public
+                </span>
+                <span class="material-icons mspan">
+                    shopping_cart
+                    </span>
+                    
+                    <span class="material-icons mspan">
+                        account_circle
+                        </span>
+        </div>
+
+    </nav>
+
+    <div class="quickmenu">
+        <div><span>Quik</span><span>Menu</span></div>
+        <span class="quick">입학 지원</span>
+        <a href="lecordonbleuBrochure.html" class="quick">안내 책자</a>
+        <span class="quick">연락처</span>
+        <span class="quick">소식 받기</span>
+    </div>
+
+    <a href="#" class="top">
+        TOP
+    </a>
 
     <div class="section">
 
@@ -162,11 +611,87 @@
     </div>
 
 
+
+    
+    <footer>
+
+        
+        <div class="inner footer">
+            
+            <div class="inner snsicon">
+                <a href="https://www.facebook.com/LeCordonBleuKorea"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCZHljmjCqbxMj6EUlAHggVQ"><i class="fab fa-youtube"></i></a>
+                <a href="https://blog.naver.com/lcbsm"><i class="fas fa-blog"></i></a>
+            </div>
+    
+            <ul class="right">
+                <li>
+                    <div><span>제휴안내</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <ul class="sub">
+                        <li>레스토랑</li>
+                        <li>파트너쉽</li>
+                        <li>인재채용</li>
+                        <li>컨설팅</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div><span>부띠끄</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <ul class="sub">
+                        <li>USA 부띠끄</li>
+                        <li>유럽 부띠끄</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div><span>포털 서비스</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <ul class="sub">
+                        <li>재학생</li>
+                        <li>동문 네트워크</li>
+                        <li>업계 채용 담당자</li>
+                        <li>유학원</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="inner left">
+            <div class="lcb">
+                <div>
+                    <span>le cordon bleu</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <span>연락처 안내</span>
+                <span>이용약관</span>
+                <span>개인정보취급방침</span>
+                <span>쿠키 정책</span>
+                <span>사이트맵</span>
+            </div>
+            <address>
+                서울특별시 용산구 정파로 47길 100, 숙명여자대학교 사회교육관 7층, 04310<br>
+                <a href="tel:02-719-6961">T.02-719-6961</a>
+                <span>F.02-719-7569</span>
+            </address>
+            <p>Copyright © 2021 Le Cordon Bleu International B.V. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/jquery.ui.touch-punch.min.js"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
 
     <script src="../js/lecordonbleuBrochure.js"></script>
 

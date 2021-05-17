@@ -1,5 +1,117 @@
 
 
+
+  // 공지 팝업창
+  $('.btn_close').click(function () {
+
+    var chkd = $("#pop_day").is(":checked");
+    if (chkd) {
+      $.cookie('popup', 'hidden', { expires: 1 });
+    }
+    $('.notice').css('display', 'none');
+  });
+
+  if ($.cookie('popup') == 'hidden') {
+    $('.notice').css('display', 'none');
+  } else {
+    $('.notice').css('display', 'flex');
+  }
+  $('#closeCheck').click(function () {
+    $('.notice').css('display', 'none');
+  });
+  
+  $("#draggable").draggable();
+
+
+//캠퍼스
+  $(".campus").hide();
+  $(".showmap").click(function () {
+    $(".campus").slideToggle();
+  });
+  
+  $(".mcampus").hide();
+  $(".mcampusbutton").click(function () {
+    $(this).next().slideToggle();
+    $(".mcampus").not(this).next().hide();
+  });
+
+  
+
+
+  $(".closemap").click(function () {
+    $(".campusGate").hide();
+    $(".campus").hide();
+  });
+
+  $(".campusbutton").click(function () {
+    $(".campus").fadeToggle();
+  });
+
+  //nav
+  $(".mMenu").click(function () {
+    $("nav").addClass("on");
+    $(".top").hide();
+    $(".quickmenu").hide();
+
+  });
+  $(".mX").click(function () {
+    $("nav").removeClass("on");
+    $(".top").show();
+    $(".quickmenu").show();
+  });
+
+
+  $(".menu > li > div").click(function () {
+    $(this).next().toggleClass("on");
+    $(".menu > li > div").not(this).next().removeClass("on");
+    return false;
+  });
+ 
+
+  //퀵메뉴
+  var iw = window.innerWidth;
+  if (iw < 1081) {
+    $(".quickmenu .quick").hide();
+    $(".quickmenu > div").click(function () {
+      $(".quickmenu .quick").slideToggle();
+    });
+  }
+  
+  // top버튼
+  $(".top").hide();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > $("header").height()) {
+      $(".top").fadeIn("swing");
+    } else {
+      $(".top").fadeOut("swing");
+    }
+  });
+
+  $( '.top' ).click( function() {
+    $( 'html, body' ).animate( { scrollTop : 0 }, 1000 );
+    return false;
+  } );
+
+
+
+  
+
+
+
+  $(".right > li > div").click(function () {
+    $(this).next().toggleClass("on");
+    $(".right > li > div").not(this).next().removeClass("on");
+    $(".lcb").find("span").removeClass("on");
+    return false;
+  });
+  
+  $(".lcb > div").click(function () {
+    $(this).siblings().toggleClass("on");
+    $(".right").find(".sub").removeClass("on");
+    return false;
+  });
+
+
 // 폰트 사이트 조절
 function getSize() {
   size = $( "form > *" ).css( "font-size" );
