@@ -1,28 +1,6 @@
 
 
 
-  // 공지 팝업창
-  $('.btn_close').click(function () {
-
-    var chkd = $("#pop_day").is(":checked");
-    if (chkd) {
-      $.cookie('popup', 'hidden', { expires: 1 });
-    }
-    $('.notice').css('display', 'none');
-  });
-
-  if ($.cookie('popup') == 'hidden') {
-    $('.notice').css('display', 'none');
-  } else {
-    $('.notice').css('display', 'flex');
-  }
-  $('#closeCheck').click(function () {
-    $('.notice').css('display', 'none');
-  });
-  
-  $("#draggable").draggable();
-
-
 //캠퍼스
   $(".campus").hide();
   $(".showmap").click(function () {
@@ -34,9 +12,6 @@
     $(this).next().slideToggle();
     $(".mcampus").not(this).next().hide();
   });
-
-  
-
 
   $(".closemap").click(function () {
     $(".campusGate").hide();
@@ -92,9 +67,6 @@
     return false;
   } );
 
-
-
-  
 
 
 
@@ -159,15 +131,17 @@ var swiper = new Swiper(".mySwiper", {
 function getCheckboxValue()  {
 
   // 선택된 목록 가져오기
-  const query = 'input[name="brochure"]:checked';
-  const selectedEls = 
+  var query = 'input[name="brochure"]:checked';
+  var selectedEls = 
       document.querySelectorAll(query);
 
   // 선택된 목록에서 value 찾기
-  let result = '';
+
+  var result = '';
   selectedEls.forEach((el) => {
     result += el.value + '<br><br>';
-  });
+  })
+  // })
 
   // 출력
   document.getElementById('result').innerHTML

@@ -296,7 +296,7 @@ nav.on{
 .se2 > div{
     display: flex;
     flex-direction: row;
-    overflow-y: scroll;
+    overflow-x: scroll;
 }
 .prgbox > div{
     margin: 0 10px;
@@ -339,7 +339,7 @@ nav.on{
 }
 .personal{
     width: 100%;
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
 }
 .personal > div{
@@ -404,13 +404,13 @@ footer{
     height: 40px;
     line-height: 40px;
     color: rgb(64, 72,87);
-    border-bottom: 1px solid rgb(64, 72,87);
     padding-left: 5px;
-}
-.lcb > span::before{
     display: none;
 }
 .lcb > span{
+    border-bottom: 1px solid rgb(64, 72,87);
+}
+.lcb > span::before{
     display: none;
 }
 .lcb > span.on{
@@ -436,3 +436,18 @@ footer{
     width: 100%;
     justify-content: space-evenly;
 }
+
+/* 크로스브라우징 */
+.is-ie .mcampus a {margin-right: 10px;}
+.is-ie .noticetext p {width:200px;}
+.is-ie .noticetext {width:230px; height: 300px;}
+.is-ie .menu > li .sub_menu {top: 0}
+.is-ie .mlangbutton {margin: 10px;}
+.is-ie .pbutton span{display: none;}
+.is-ie .img > div.on .n2{display: block;}
+.is-ie .formopen.on {width: 300px;}
+.is-ie .on.open.notice5 {display: block;width: 300px;}
+.is-ie .personal.open.on p{font-size:1rem;}
+.ie11 .se2 > div{flex-direction: column; height: 500px; overflow-x: visible; overflow-y: scroll;}
+.ie11 .prgbox{flex-direction: column; margin: 0;}
+.ie11 .prgbox div {margin: 10px auto; }

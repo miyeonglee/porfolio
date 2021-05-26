@@ -17,8 +17,12 @@
 h2{
     font-size: 2.5rem;
     text-align: center;
-    color: rgb(234,231,220);
     font-weight: 800;
+
+    color: #88794b;
+}
+.visual h2{
+    color: rgb(234,231,220);
 }
 h3{
     font-size: 1.7rem;
@@ -28,51 +32,6 @@ p{
     font-size: 1.2rem;
 }
 
-/* 코로나 관련 공지사항 */
-.notice{
-    padding:25px;
-    width: 500px;
-    position: fixed;
-    top: 50px;
-    left: 700px;
-    background: white;
-    border: 1px solid #9a9a9a;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.notice h2::after{
-    display: none;
-}
-.notice > *{
-    margin: 10px 0;
-}
-.noticetext p{
-    margin: 15px 0;
-}
-.notice_close{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 50px;
-}
-.notice_close #closeCheck{
-    cursor: pointer;
-}
-.notice form{
-    display: flex;
-    flex-direction: row;
-}
-.notice form label{ display: none; }
-.notice form a, 
-.notice form a:visited{ 
-    text-decoration: none;
-    color: #444;
-    display: block;
-    margin: 0 0 0 10px;
-}
 
 
 
@@ -343,6 +302,7 @@ nav{
     background-color: white;
 }
 .menu{
+    position: relative;
     height: 70px;
     line-height: 70px;
     display: flex;
@@ -694,8 +654,10 @@ footer .snsicon > a{
     height: 40px;
     line-height: 40px;
     color: rgb(64, 72,87);
-    border-bottom: 1px solid rgb(64, 72,87);
     padding-left: 5px;
+}
+.right .sub > li:last-child{
+border-bottom: 1px solid rgb(64, 72,87);
 }
 .right .sub.on{
     display: flex;
@@ -705,3 +667,9 @@ footer .snsicon > a{
 
 
 
+/* 크로스브라우징 */
+
+.is-ie .menu > li .sub_menu {top: 70px}
+.is-ie .se1 .youtube{text-align: center;}
+.is-ie .quickmenu .quick{display: inline-block;}
+.is-ie .map .dot:hover div p{width: 230px;}

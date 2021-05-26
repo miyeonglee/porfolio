@@ -292,7 +292,7 @@ nav.on{
 .se2 > div{
     display: flex;
     flex-direction: row;
-    overflow-y: scroll;
+    overflow-x: scroll;
 }
 .prgbox > div{
     margin: 0 10px;
@@ -305,7 +305,9 @@ nav.on{
     width: 400px;
     height: 300px;
 }
-
+.pbutton span{
+    display: none;
+}
 /* se3 */
 .se3 > h2{
     margin-bottom: 30px;
@@ -343,7 +345,7 @@ nav.on{
 }
 .personal{
     width: 100%;
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
 }
 .personal > div{
@@ -403,4 +405,25 @@ footer{
 .snsicon{
     margin-bottom:10px;
     width: 100%;
+}
+
+/* 크로스브라우징 */
+.is-ie .menu > li .sub_menu {top: 0}
+.is-ie .noticetext p { width:300px; }
+.is-ie .mlangbutton {margin: 10px;}
+.is-ie .noticetext{height: 400px;}
+.is-ie .mcampus a{margin: 0 15px;}
+.is-ie .notice5.open.on {display: table;}
+.is-ie .img > div.on .n2 {display: block;}
+.is-ie .formopen.on{width: 100%;}
+.is-ie .personal.open.on .pb{display: flex;flex-direction: row;}
+.is-ie .right > li{width: 33%;}
+.is-ie .se2 > div{display: block;overflow:visible;}
+.is-ie .prgbox{width: 100%;}
+.is-ie .prgbox:first-child > div{
+    width: 31%;
+}
+.is-ie .prgbox:last-child > div{
+    width: 23%;
+    height: 370px;
 }

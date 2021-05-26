@@ -2,10 +2,6 @@
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
-
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -370,6 +366,7 @@ nav{
     background-color: white;
 }
 .menu{
+    position: relative;
     height: 70px;
     line-height: 70px;
     display: flex;
@@ -852,14 +849,16 @@ textarea{
     margin: 0 auto;
 }
 .open, .formopen{
-    display: none!important;
+    display: none;
+    /* display: none!important; */
 }
 .open.on{
-    display: flex!important;
+    /* display: flex!important; */
+    display: flex;
 }
-
 .formopen.on{
-    display: block!important;
+    /* display: block!important; */
+    display: block;
 }
 
 /* footer */
@@ -952,8 +951,10 @@ footer .snsicon > a{
     height: 40px;
     line-height: 40px;
     color: rgb(64, 72,87);
-    border-bottom: 1px solid rgb(64, 72,87);
     padding-left: 5px;
+}
+.right .sub > li:last-child{
+    border-bottom: 1px solid rgb(64, 72,87);
 }
 .right .sub.on{
     display: flex;
@@ -961,5 +962,19 @@ footer .snsicon > a{
 
 
 
+
+
+/* 크로스브라우징 */
+/* ie10,ie11hack */
+.is-ie .noticetext p {width:400px;}
+.is-ie .menu > li .sub_menu {top: 70px}
+.is-ie .map .dot:hover div p{width: 230px;}
+.is-ie .se1 .youtube{text-align: center;}
+.is-ie .prgbox > div.on p{
+    background-color: rgba(64, 72,87,0.3);
+}
+.is-ie .quickmenu .quick,
+.is-ie .prgbox > div.on p,
+.is-ie .notice5.open.on{display: block;}
 
 

@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+* {
+    box-sizing: border-box; 
+    border: 1px solid olivedrab;
+}
+body{
+    padding: 0;
+    margin: 0;
+    min-width: 1280px;
+    color: #000;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+header,nav,.horizon,footer{ width: 100%; }
+
+.horizon{
+    height: 100vh;
+}
+/* .horizon .sec01{ background: #F6B352; }
+.horizon .sec02{ background: #F68657; }
+.horizon .sec03{ background: rgb(87, 235, 246); }
+.horizon .sec04{ background: #000; }
+.horizon .sec05{ background: #383A3F; } */
+
+/* .swiper-container .swiper-wrapper .swiper-slide{
+    padding: 100px;
+} */
+
+/* custmm bullets style */
+.horizon > .swiper-pagination{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(55, 151, 219);
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 100;
+}
+.logo{
+    width: 200px;
+    height: 80px;
+    background: url(../images/johnsonsbaby-korea-logo_1.png) no-repeat;
+    background-size: 100%;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 20px;
+    z-index: 101;
+    cursor: pointer;
+    margin: 10px;
+}
+.horizon > .swiper-pagination .swiper-pagination-bullet {
+    width: 200px;
+    height: 50px;
+    border-radius: unset;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color:#fff;
+    opacity: 1;
+    background:transparent;
+}
+.horizon > .swiper-pagination .swiper-pagination-bullet-active {
+    font-size: 24px;
+    font-weight: 800;
+    color:#000;
+}
+
+
+/* sec01 */
+
+.sec01 .copy{
+    width: 100%;
+    height: 100%;
+}
+.mtext{
+    width: 100%;
+    height: 100%;
+    padding: 300px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.mtext .title{
+    font-size: 2rem;
+    margin: 30px 20px;
+    font-weight: 700;
+}
+
+.mtext .text{
+    font-size: 1.3rem;
+    width: 600px;
+}
+
+.sec01 .swiper-pagination{
+    bottom: 500px;
+    padding: 0 100px;
+    text-align: right;
+}
+
+.copy{
+    --swiper-navigation-color: #000; 
+    --swiper-pagination-color: #ddd;
+}
+
+.parallax-bg{
+    background: url(../images/photo-1505679208891-9ab12ee61dc1.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    /* -webkit-background-size: cover; */
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* se02 */
+.menu{
+    top: 101px;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+
+/* sec04 */
+.sec04{
+    display: flex;
+    flex-direction: row;
+}
+.sec04 .left, .sec04 .right{
+    height: 100%;
+    width: 10%;
+    transition: width 0.5s;
+}
+.sec04 .left.on, .sec04 .right.on{
+    height: 100%;
+    width: 90%;
+    transition: width 0.5s;
+}
+
+/* sec05 */
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(55, 151, 219);
+}
