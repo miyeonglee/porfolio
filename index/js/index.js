@@ -45,3 +45,4 @@ var swiper = new Swiper(".mySwiper", {
 $(document).ready(function(){
     autoType(".main", 150);
 });
+
