@@ -92,7 +92,10 @@ header .menu a{
     background-size: cover;
     position: relative;
 }
+.main .typing{
+    animation: blink-caret .5s step-end infinite;
 
+}
 /* ss02 */
 .ss02 {
     background: url(../images/B9.jpg) 0 30%;
