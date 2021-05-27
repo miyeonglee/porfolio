@@ -112,8 +112,9 @@ header .menu.on a {
     width: 100%;
     height: 78%;
     flex-direction: column;
-    justify-content: flex-end;
+    align-items: center;
     padding: 35px;
+    justify-content: center;
 }
 .ss03 .page{
     width: 250px;
