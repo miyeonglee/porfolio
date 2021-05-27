@@ -1,0 +1,159 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+
+body{
+    min-width: 320px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid rosybrown; */
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #eee;
+    opacity: 0.5;
+    font-style: italic;
+}
+h2 {
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+.swiper-pagination-bullets{
+    margin-right: 5px;
+}
+
+.swiper-pagination-bullets{
+    display: none;
+}
+
+/* header */
+header{
+    height: 50px;
+    opacity: 0.5;
+    z-index: 100;
+    padding: 10px;
+
+}
+header a{
+    font-size: 1rem;
+}
+
+.mMenu{
+    display: block;
+    font-size: 1.5rem;
+    color: #ddd;
+    position: relative;
+
+}
+
+header .menu{
+    display: none;
+}
+.menu.on{
+    width: auto;
+    position:absolute;
+    top: 50px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 150;
+}
+header .menu.on a {
+    margin: 10px 0;
+}
+
+
+
+/* ss02 */
+
+.about {
+    height: auto;
+}
+.about .row1{
+    width: auto;
+    margin-bottom: 30px;
+}
+.about .row1 span:first-child{
+    font-size: 3rem;
+}
+
+.about .row2 {
+    flex-direction: column;
+    align-items: center;
+}
+.box {
+    width: 220px;
+    height: 70px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+.toggleP{display: none;}
+
+/* on */
+.box.on{
+    height: auto;
+}
+.box.on .toggleP{
+    display: flex;    
+}
+
+/* ss03 */
+.ss03 .work{
+    width: 100%;
+    height: 78%;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 35px;
+}
+.ss03 .page{
+    width: 250px;
+    height: 133px;
+    border-radius: 0px;
+}
+.ss03 .content{
+    width: 255px;
+    margin: 0;
+}
+.ss03 p{
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.ss03 h3{
+    opacity: 0.5;
+    font-size: 6rem;
+    top: -215px;
+    left: 0px;
+}
+h4{
+font-size: 2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+
+/* ss04 */
+.position{
+    width: 300px;
+    height: 300px;
+}
+
+.ss04 span{
+    font-size: 2rem;
+    top: -50px;
+}
+.ss04 a {
+    font-size: 1rem;
+ }
