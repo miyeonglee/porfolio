@@ -110,7 +110,7 @@ header .menu.on a {
 /* ss03 */
 .ss03 .work{
     width: 100%;
-    height: 78%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     padding: 35px;
