@@ -4,7 +4,7 @@
 
 <head>
     <META charset="UTF-8">
-    <title>index</title>
+    <title>portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="index/css/index.css">
@@ -21,9 +21,9 @@
             <a href="#s2">ABOUT</a>
             <a href="#s3">WORKS</a>
             <a href="#s4">CONTACT</a>
-   
-    </div>
-    <span class="material-icons-outlined mMenu">menu</span>
+
+        </div>
+        <span class="material-icons-outlined mMenu">menu</span>
 
     </header>
 
@@ -31,8 +31,15 @@
         <div class="swiper-wrapper">
 
             <div id="s1" class="swiper-slide ss01">
+                <!-- STAR ANIMATION -->
+                <div class="bg-animation">
+                    <div id='stars'></div>
+                    <div id='stars2'></div>
+                    <div id='stars3'></div>
+                    <div id='stars4'></div>
+                </div><!-- / STAR ANIMATION -->
                 <div class="main">
-                    <h1>PORTFOLIO</h1>
+                    <h1 class="fill">PORTFOLIO</h1>
                     <h2 class="typing">UI/UX WEB DESIGN &amp; PUBLISHING</h2>
                 </div>
             </div>
@@ -40,8 +47,8 @@
             <div id="s2" class="swiper-slide ss02">
 
                 <h1>ABOUT</h1>
-     
-                  <div class="about">
+
+                <div class="about">
                     <div class="row1">
                         <span>이미영</span>
                         <span>1996.05.15</span>
@@ -74,37 +81,54 @@
             </div>
             <div id="s3" class="swiper-slide ss03">
 
-                <H1>WORKS</H1>
-                <div class="work">
-                    <a class="page" target="blank" href="https://miyeonglee.github.io/portfolio/lecordonbleu/html/lecordonbleu.html"></a>
-                    <div class="content">
-                        <h3>01</h3>
-                        <h4>Le Cordon Bleu</h4>
-                        <h5>르 꼬르동 블루 서울 홈페이지 리뉴얼</h5>
-                        <p>기존 페이지는 멀티미디어 요소의 사이즈가 크고 프로그램에 대한 정보가 페이지마다
-                            다르게 제공되어 사용에 불편함이 있었습니다.
-                            그러한 점을 개선하여 리뉴얼 작업을 진행하였습니다.</p>
-                        <div>
-                        <a class="button" target="blank" href="https://miyeonglee.github.io/portfolio/lecordonbleu/html/lecordonbleu.html">website</a>
-                        <a class="button" target="blank" href="http://ezportfolio.cafe24.com/ez210215/pdf/lmy_ui.pdf">UI guide</a>
-                        <a class="button" target="blank" href="http://ezportfolio.cafe24.com/ez210215/pdf/lmy_presentation.pdf">more</a>
+                <input id="modalToggle" class="hide" type="checkbox">
+                <div class="modal">
+                    <label class="btn btn-open" for="modalToggle">Le Cordon Bleu</label>
 
-                    </div>
-                    </div>
+                    <div class="inside">
+                        <label class="btn-close" for="modalToggle">X</label>
+                        <div class="work">
+                            <a class="page" target="blank"
+                                href="https://miyeonglee.github.io/portfolio/lecordonbleu/html/lecordonbleu.html"></a>
+                            <div class="content">
+                                <h3>01</h3>
+                                <h4>Le Cordon Bleu</h4>
+                                <h5>르 꼬르동 블루 서울 홈페이지 리뉴얼</h5>
+                                <p>기존 페이지는 멀티미디어 요소의 사이즈가 크고 프로그램에 대한 정보가 페이지마다
+                                    다르게 제공되어 사용에 불편함이 있었습니다.
+                                    그러한 점을 개선하여 리뉴얼 작업을 진행하였습니다.</p>
+                                <div class="more button">more
+                                    <a target="blank"
+                                        href="https://miyeonglee.github.io/portfolio/lecordonbleu/html/lecordonbleu.html">main_page</a>
+                                    <a target="blank"
+                                        href="https://miyeonglee.github.io/portfolio/lecordonbleu/html/lecordonbleuBrochure.html">sub_page</a>
+                                    <a target="blank" href="http://ezportfolio.cafe24.com/ez210215/pdf/lmy_ui.pdf">UI
+                                        guide</a>
+                                    <a target="blank"
+                                        href="http://ezportfolio.cafe24.com/ez210215/pdf/lmy_presentation.pdf">more</a>
 
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+
+
+
+                <H1>WORKS</H1>
             </div>
 
             <div id="s4" class="swiper-slide ss04">
 
                 <H1>CONTACT</H1>
                 <div class="position">
-                 <span>GET IN TOUCH</span>
-                <a class="circle1" href="mailto:miyeong1596@gmail.com">miyeong1596@gmail.com</a>
+                    <span>GET IN TOUCH</span>
+                    <a class="circle1" href="mailto:miyeong1596@gmail.com">miyeong1596@gmail.com</a>
 
-                <a class="circle2" href="tel:01043882316">010.4388.2316</a>
+                    <a class="circle2" href="tel:01043882316">010.4388.2316</a>
+                </div>
             </div>
-        </div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
