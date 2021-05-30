@@ -1,9 +1,7 @@
 @charset "UTF-8";
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 *{
     margin: 0;
     padding: 0;
@@ -15,6 +13,12 @@
 .inner{
     width: 1500px;
     margin: 0 auto;
+    color: rgb(0, 35, 107);
+    color: rgb(152,136,84);
+
+    color: rgb(24, 32, 48);
+    color: rgb(64, 72,87);
+
 }
 h1{
     font-size: 3rem;
@@ -51,9 +55,7 @@ p{
     line-height: 1.4;
     font-size: 1.2rem;
 }
-html {
-    scroll-behavior: smooth;
-}
+
 
 /* 코로나 관련 공지사항 */
 .notice{
@@ -74,6 +76,9 @@ html {
 }
 .notice > *{
     margin: 10px 0;
+}
+.noticetext p{
+    margin: 15px 0;
 }
 .notice_close{
     width: 80%;
@@ -117,6 +122,9 @@ html {
     cursor: pointer;
 }
 /* campus */
+.mMap{
+    display: none;
+}
 .campus{
     background-color: rgb(24, 32, 48);
     display: flex;
@@ -168,7 +176,7 @@ html {
     width: 250px;
     text-align: center;
     position: absolute;
-    top: -110px;
+    top: -135px;
     left: -120px;
     z-index: 100;
 }
@@ -310,9 +318,6 @@ html {
     justify-content: space-between;
     align-items: center;
 }
-.mMenu, .mX{
-    display: none;
-}
 .header .logo{
     width: 500px;
     height: 150px;
@@ -326,8 +331,7 @@ html {
     display: flex;
     justify-content: space-between;
 }
-
-.span a{
+.span > *{
     margin: 0 5px;
     text-decoration: none;
     color: black;
@@ -346,7 +350,7 @@ html {
     flex-direction: row;
     align-items: center;
 }
-.langbutton > a{
+.langbutton > span{
     width: 50px;
     height: 20px;
     line-height: 20px;
@@ -355,7 +359,7 @@ html {
     text-decoration: none;
     color: black;
 }
-.langbutton > a:hover{
+.langbutton > span:hover{
     background-color: #ddd;
 }
 /* nav */
@@ -367,10 +371,8 @@ nav{
     z-index: 150;
     background-color: white;
 }
-.msearch{
-    display: none;
-}
 .menu{
+    position: relative;
     height: 70px;
     line-height: 70px;
     display: flex;
@@ -379,7 +381,7 @@ nav{
     letter-spacing: 1px;
     font-size: 20px;
 }
-.menu > li a{
+.menu > li div{
     text-decoration: none;
     color: black;
     margin: 0 10px;
@@ -400,7 +402,7 @@ nav{
     margin: 0 10px;
     padding: 0 15px;
 }
-.menu li:hover a,
+.menu li:hover div,
 .menu li:hover{
     color: rgb(152,136,84);
 }
@@ -412,7 +414,9 @@ nav{
     background-color: rgba(154, 169, 193, 0.6);
     border-top: 1px solid #ddd;
 }
-
+.mMenu, .mX, .msearch, .mform, .mlangbutton{
+    display: none;
+}
 
 /* quickmenu */
 .quickmenu{
@@ -434,7 +438,7 @@ nav{
     flex-direction: column;
     justify-content: center;
 }
-.quickmenu > a {
+.quickmenu .quick {
     width: 80px;
     height: 40px;
     line-height: 40px;
@@ -444,7 +448,7 @@ nav{
     transition: all 1s;
     text-decoration: none;
 }
-.quickmenu > a:hover{
+.quickmenu .quick:hover{
     width: 160px;
     background-color: rgb(0, 35, 107);
 }   
@@ -569,6 +573,7 @@ nav{
   }
   
   .popup .close {
+      text-decoration: none;
     position: absolute;
     right: -40px;
     top: -30px;
@@ -581,11 +586,11 @@ nav{
   }
 
 /* 프로그램 */
-.prg{
+.se2{
     display: flex;
     flex-direction: column;
 }
-.pprg{
+.prgbox{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -593,26 +598,22 @@ nav{
     margin: 20px auto;
     color: white;
 }
-.pprg > div{
+.prgbox > div{
     position: relative;
 }
-.pprg > div p{
-    display: none;
-}
-
-.pprg > .long{
+.prgbox > .long{
     width: 730px;
     height: 250px;
     padding: 40px;
     transition: all 0.5s;
 }
-.pprg > .short{
+.prgbox > .short{
     width: 350px;
     height: 250px;
     padding: 30px;
     transition: all 0.5s;
 }
-.pprg .pbutton{
+.pbutton{
     width: 30px;
     height: 30px;
     color: white;
@@ -628,38 +629,48 @@ nav{
     overflow: hidden;
     display: none;
 }
-.pprg .pbutton span{
+.pbutton span{
+    opacity: 0;
+    width: 0;
+}
+.prgbox div p{
     display: none;
 }
 
-.pprg > div:hover{
+/* hover하면 - on */
+.prgbox > div.on{
     border-radius: 10px;
     box-shadow: 5px 10px 10px rgb(153, 152, 152);
     background-blend-mode: multiply;
     color: white;
-    transform: translate(-10px, -10px);
+    transform: translate(0, -10px);
 }
-.pprg > div:hover .pbutton{
+.prgbox > div.on .pbutton{
     display: flex;
     justify-content: center;
 }
-.pprg > div:hover h3{
+.prgbox > div.on h3{
     margin-bottom: 15px;
 }
-.pprg > div:hover p{
+.prgbox > div.on p{
     display: flex;
     text-align: justify;
 }
-.pbutton:hover{
+
+/* pbutton.on */
+.pbutton.on{
     width: 120px;
     padding: 0 5px;
     justify-content: space-between!important;
     border-radius: 15px;
     transition: width 0.5s;
 }
-.pbutton:hover span{
-    display: flex;
+.pbutton.on span{
+    width: auto;
+    opacity: 1;
+    transition: all 3.5s;
 }
+
 .p01{
     background: url(../images/lecordonbleu/64478.jpg) 50% 45%, #9A9A9A;
     background-size: cover;
@@ -701,21 +712,10 @@ nav{
     margin-bottom: 50px;
 }
 .img {
-    /* display: flex; */
-    /* flex-direction: row; */
     margin: 50px 0;
-    /* position: relative; */
 }
 .img > div{
     height: 400px;
-}
-.newstext{
-    width: 100%;
-    height: 150px;
-    background: rgba(24, 32, 48, 0.5);
-    position: absolute;
-    bottom: 0;
-    padding: 20px;
 }
 .newstext h3{
     color: white;
@@ -726,17 +726,29 @@ nav{
 .newstext p{
     color: #88794b;
 }
-.img > div:hover .newstext{
+
+.img > div .newstext{
+    width: 100%;
+    height: 150px;
+    background: rgba(24, 32, 48, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.img > div .n2{
+    display: none;
+}
+/* on */
+.img > div.on .newstext{
     height: 100%;
     padding: 150px 20px 20px 20px;
 }
-.newstext .n2{
+.img > div.on .n1{
     display: none;
 }
-.img > div:hover .n1{
-    display: none;
-}
-.img > div:hover .n2{
+.img > div.on .n2{
     display: flex;
     color: white;
 }
@@ -769,11 +781,8 @@ nav{
 }
 
 
-
-
-
-/* se5 */
-.se5{
+/* se4 */
+.se4{
     width: 100%;
     background-color: rgb(64, 72,87);
     display: flex;
@@ -784,23 +793,24 @@ nav{
     padding: 50px;
     position: relative;
 }
-.se5 > .inner{
+.se4 > .inner{
     width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.se5 > .inner > div{
+.se4 form > *{
+    margin-bottom: 10px;
+}
+.se4 form span{
+    font-size: 1rem;
+}
+.button{
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px 0;
-}
-
-.se5 form > *{
-    margin-bottom: 10px;
-}
-.button{
     width: 200px;
     height: 40px;
     border-radius: 30px;
@@ -809,7 +819,8 @@ nav{
 }
 .button:hover{
     color: rgb(24, 32, 48);
-    background-color: rgb(153, 152, 152);
+    background-color: rgb(234,231,220);
+    border: 2px solid rgb(24, 32, 48);
     transition: all 1s;
 }
 .personal{
@@ -844,53 +855,70 @@ textarea{
     margin: 0 auto;
 }
 .open, .formopen{
-    display: none!important;
+    display: none;
+    /* display: none!important; */
 }
 .open.on{
-    display: flex!important;
+    /* display: flex!important; */
+    display: flex;
 }
 .formopen.on{
-    display: block!important;
+    /* display: block!important; */
+    display: block;
 }
 
 /* footer */
 footer{
-    height: 300px;
-    padding: 50px 0;
+    height: 250px;
+    padding: 30px 0;
     background-color: rgb(24, 32, 48);
     color: rgb(64,72,87);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 }
-/* .푸터 */
 .footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.footer address a{
+address a{
     text-decoration: none;
     color: rgb(64, 72,87);
 }
-.footer > div:first-child{
+.footer .snsicon{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
 }
-.footer > .ffoo{
+footer .snsicon > a{
+    margin-right:20px;
+    border-radius: 50%;
+    background-color: rgb(64,72,87);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(24,32,48);
+    text-decoration: none;
+}
+.footer > .right{
     display: flex;
     flex-direction: row;
 }
-.footer .fo > div > i{
+.left{
+    margin-top: 30px;
+}
+.lcb i{
     display: none;
 }
-.footer .fo > span{
+.lcb > span{
     margin-right: 10px;
     position: relative;
     color:rgb(64,72,87);
-    cursor: pointer;
 }
-.footer .fo > span::before{
+.lcb > span::before{
     content: "";
     width: 1px;
     height: 13px;
@@ -899,12 +927,12 @@ footer{
     top: 5px;
     left: -7px;
 }
-.footer .fo > span:nth-of-type(1)::before{
+.lcb > span:nth-of-type(1)::before{
     display: none;
 }
-
-.ffoo > li div{
-    background-color: rgb(64,72,87);
+.right > li div{
+    border-top: 1px solid rgb(64, 72,87);
+    border-bottom: 1px solid rgb(64, 72,87);
     color: white;
     width: 160px;
     height: 45px;
@@ -917,46 +945,42 @@ footer{
     align-items: center;
     cursor: pointer;
 }
-.ffoo .sub{
-    cursor: pointer;
+.right .sub{
     display: flex;
     flex-direction: column;
     width: 160px;
-    background-color: rgb(154, 169, 193);
     margin: 0 5px;
     position: absolute;
     display: none;
 }
-.ffoo .sub > li{
+.right .sub > li{
     height: 40px;
     line-height: 40px;
-    background-color: rgb(154, 169, 193);
+    color: rgb(64, 72,87);
     padding-left: 5px;
 }
-.ffoo .sub.on{
+.right .sub > li:last-child{
+    border-bottom: 1px solid rgb(64, 72,87);
+}
+.right .sub.on{
     display: flex;
 }
 
-/* sns */
-footer .snsicon{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 500px;
-}
-footer .snsicon > span{
-    border-radius: 50%;
-    background-color: rgb(64,72,87);
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    color: rgb(24,32,48);
-    text-decoration: none;
-    cursor: pointer;
-}
 
+
+
+
+/* 크로스브라우징 */
+/* ie10,ie11hack */
+.is-ie .noticetext p {width:400px;}
+.is-ie .menu > li .sub_menu {top: 70px}
+.is-ie .map .dot:hover div p{width: 230px;}
+.is-ie .se1 .youtube{text-align: center;}
+.is-ie .prgbox > div.on p{
+    background-color: rgba(64, 72,87,0.3);
+}
+.is-ie .quickmenu .quick,
+.is-ie .prgbox > div.on p,
+.is-ie .notice5.open.on{display: block;}
 
 

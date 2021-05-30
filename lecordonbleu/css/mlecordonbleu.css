@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 body{
     min-width: 320px;
 }
@@ -21,90 +21,146 @@ h2{
     font-size: 1.5rem;
     margin: 50px 0;
 }
+h2::after{
+display: none;
+}
 h3{
     font-size: 1rem;
 }
 
 /* 코로나 관련 공지사항 */
 .notice{
-    top: 20px;
-    left: 20px;
-    width: 90%;
+    top: 10px;
+    left: 15px;
+    width: 280px;
     height: 500px;
-    overflow-y: scroll;
+    font-size: 12px;
 }
-
+.notice h2{
+    word-break: keep-all;
+}
+.noticetext{
+    overflow-y: scroll;
+    text-align: justify;
+}
 /* campus */
-.campusGate, .campus{
+.campusGate{
+    width: 100%;
+    padding: 10px;
+}
+.campus{
+    padding: 20px;
+}
+.campus h2 {
+    margin: 0;
+}
+.campus > .text > p {
+    font-size: 1rem;
+}
+.map {
     display: none;
 }
+.mMap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.mcampusbutton{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.mcampus{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.mcampus a{
+    color: white;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+}
 
-/* 기본 */
+
+
+
+/* 헤더 */
 header{
-    height: 80px;
-    word-break: keep-all;
+position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 150;
+    border-bottom: 1px solid #ddd;
+}
+.header{
+    height: 65px;
+    padding: 0 10px;
+
+}
+.header .logo{
+    width: 200px;
+    height: 100%;
 }
 .header .search{
     display: none;
 }
-nav{
-    display: none;
-}
-
-
-/* 메뉴 클릭 */
-
-nav{
-    border: none;
-    /* height: auto; */
-    z-index: 0;
-}
-.header form input {
-    width: 170px;
-    height: 30px;
-    margin-right:10px;
-}
-.form {
-    margin: 10px;
-    align-items: center;
-    display: none;
-}
-.header .span{
-    display: none;
-}
-.header .msearch .mspan{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: white;
+.mMenu {
+    display: block;
     font-size: 25px;
 }
+nav{
+    display: none;
+}
 
-.header .search {
-    height: auto;
+/* nav */
+nav.on{
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgb(24, 32, 48);
+    padding: 10px;
+    overflow: scroll;
 }
-.header .msearch {
+.mX{
     display: flex;
-    flex-direction: row;
+    align-self: flex-end;
+    font-size: 25px;
+}
+.mform, .mlangbutton, .msearch{
+    display: flex;
+}
+.mform{
+    margin: 10px;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    width: 150px;
-    display: none;
+    width: 170px;
+    height: 50px;
 }
-.header .search >div{
-    margin-bottom: 10px;
+.mform input{
+    width: 130px;
+    height: 25px;
+    margin-right: 10px;
 }
-.langbutton{
+
+.mlangbutton{
     display: flex;
     flex-direction: row;
     align-items: center;
-    display: none;
 }
-.langbutton > a{
+.mlangbutton > div{
     width: 100px;
     height: 30px;
     line-height: 30px;
@@ -112,12 +168,11 @@ nav{
     border: 1px solid #ddd;
     margin: 0 2px;
     color: white;
+    text-decoration: none;
 }
 .menu{
     height: auto;
-    color: white;
     flex-direction: column;
-    background-color: rgb(24, 32, 48);
     font-size: 22px;
 }
 .menu > li {
@@ -127,34 +182,24 @@ nav{
     width: 100%;
     height: auto;
 }
-.menu > li a{
+.menu > li div{
     color: white;
-}
-.menu > li > div{
     width: 100%;
     height: auto;
     /* line-height: 55px; */
 }
-.mnav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.micon{
-    font-size: 20px;
-    color: white;
-}
+
 .menu > li .sub_menu{
     top: 0;
     left: 0;
     width: 100%;
     flex-direction: column;
-    flex-wrap: wrap;
-    overflow-y: visible;
+    /* flex-wrap: wrap; */
+    /* overflow-y: visible; */
     height: auto;
     color: white;
     background-color: rgb(154, 169, 193);
-    z-index: 0;
+    /* z-index: 0; */
     position: relative;
     display: none;
 }
@@ -165,85 +210,43 @@ nav{
     display: flex;
     height: auto;
 }
-
 .msearch {
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
+    /* display: flex; */
+    /* justify-content: space-between; */
     margin: 30px 25px;
-    display: none;
 }
 .msearch > span {
-    margin: 0 10px;
-}
-.langbutton.on{
-    display: flex;
-}
-
-/* on */
-header.on{
-    display: flex;
-    flex-direction: column;
-    border:none;
-    width: 100vw;
-    height: auto;
-    background-color: rgb(24, 32, 48);
-    padding: 35px 15px;
-    color: white;
-}
-.header .logo.on{
-    display: none;
-}
-.header .search.on{
-    display: flex;
-}
-nav.on{
-    padding: 0 15px;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: scroll;
-    position: relative;
- background-color: rgb(24, 32, 48);
- color: white;
-
-}
-.msearch.on{
-display: flex;
-}
-.form.on {
-    display: flex;
-}
-
-
-.mMenu{
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 10px;
     font-size: 20px;
-    color: rgb(24, 32, 48);
+    margin: 0 40px;
 }
-.mX{
-    font-size: 20px;
-    top: 10px;
-    right: 15px;
-    position: absolute;
-    display: none;
-}
-header .mX.on{
-    display: block;
-}
-header .mMenu.on{
-    display: none;
-}
-
 
 /* quickmenu */
 .quickmenu{
-    display: none;
+    right: 0;
+}
+.quickmenu > div{
+    width: 60px;
+    border-radius: 50%;
+}
+.quickmenu > div span{
+    font-size: 0.8rem;
+}
+.quickmenu .quick{
+    width: 60px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    margin: 2px 0;
 }
 
+/* top */
+.top{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    right: 0;
+}
 
 /* visual */
 .visual{
@@ -287,29 +290,24 @@ header .mMenu.on{
 
 
 /* 프로그램 */
-.pprg{
+.prgbox{
     width: auto;
 }
-.prg > div{
+.se2 > div{
     display: flex;
     flex-direction: row;
-    overflow-y: scroll;
+    overflow-x: scroll;
 }
-.pprg > div{
+.prgbox > div{
     margin: 0 10px;
 }
-
-.pprg > div .firstp.on{
-    display: flex;
-}
-.pprg > .long{
+.prgbox > .long{
     width: 300px;
+    height: 280px;
 }
-.pprg > .short{
+.prgbox > .short{
     width: 300px;
-}
-.pprg .pbutton{
-    display: flex;
+    height: 280px;
 }
 /* .se3 */
 .se3 > h2{
@@ -321,27 +319,15 @@ header .mMenu.on{
 .img {
     margin: 0 0 20px 0;
 }
-
-
-
-
-
-/* top */
-.top{
-    width: 50px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    right: 0;
+.img > div.on .newstext {
+    padding: 30px  20px;
 }
 
-
-
-/* se5 */
-.se5{
+/* se4 */
+.se4{
     padding: 5px;
 }
-.se5 > .inner{
+.se4 > .inner{
     width: 80%;
 }
 .button{
@@ -353,7 +339,7 @@ header .mMenu.on{
 }
 .personal{
     width: 100%;
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
 }
 .personal > div{
@@ -368,9 +354,10 @@ textarea{
     width: 100%;
     height: 300px;
 }
-.notice{
-    width: 100%;
-    font-size: 12px;
+.notice5{
+    width: auto;
+    padding: 10px;
+    text-align: justify;
 }
 
 
@@ -380,94 +367,87 @@ textarea{
 
 /* footer */
 footer{
-    /* height: 800px; */
     height: auto;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
 }
-/* .푸터 */
 .footer{
     display: flex;
     flex-direction: column;
-    order: 2;
 }
-.footer > div:first-child{
+.footer > .right{
     display: flex;
     flex-direction: column;
 }
-.footer > .ffoo{
-    display: flex;
-    flex-direction: column;
-    order: 1;
-}
-.footer .left{
-    order: 2;
-}
-/* .footer .fo{
-    display: flex;
-    flex-wrap: wrap;
-} */
-.footer .fo{
+.lcb{
     display: flex;
     flex-direction: column;
 }
-.footer .fo > div > i{
+.lcb > div > i{
     display: flex;
 }
-.footer .fo > div{
-    background-color: rgb(64,72,87);
+.lcb > div{
+    border-top: 1px solid rgb(64, 72,87);
+    border-bottom: 1px solid rgb(64, 72,87);
     color: white;
     line-height: 45px;
     width: 100%;
     height: 45px;
-    text-align: center;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
 }
-.footer .fo > span{
+.lcb > span{
     width: 100%;
     height: 40px;
     line-height: 40px;
-    background-color: rgb(154, 169, 193);
+    color: rgb(64, 72,87);
     padding-left: 5px;
-}
-.footer .fo > span::before{
     display: none;
 }
-.footer .fo > span{
+.lcb > span{
+    border-bottom: 1px solid rgb(64, 72,87);
+}
+.lcb > span::before{
     display: none;
 }
-.footer .fo > span.on{
+.lcb > span.on{
     display: flex;
 }
-
-.ffoo > li div{
+.right > li div{
     width: 100%;
     height: 45px;
-    text-align: center;
     padding: 0 15px;
     margin: 0;
 }
-
-
-.ffoo .sub{
+.right .sub{
     width: 100%;
     margin: 0;
     position: relative;
     display: none;
 }
-.ffoo .sub.on{
+.right .sub.on{
     display: flex;
 }
-/* sns */
-footer .snsicon{
-    order: 1;
+.snsicon{
     margin-bottom:10px;
     width: 100%;
-    align-items: center;
+    justify-content: space-evenly;
 }
+
+/* 크로스브라우징 */
+.is-ie .mcampus a {margin-right: 10px;}
+.is-ie .noticetext p {width:200px;}
+.is-ie .noticetext {width:230px; height: 300px;}
+.is-ie .menu > li .sub_menu {top: 0}
+.is-ie .mlangbutton {margin: 10px;}
+.is-ie .pbutton span{display: none;}
+.is-ie .img > div.on .n2{display: block;}
+.is-ie .formopen.on {width: 300px;}
+.is-ie .on.open.notice5 {display: block;width: 300px;}
+.is-ie .personal.open.on p{font-size:1rem;}
+.ie11 .se2 > div{flex-direction: column; height: 500px; overflow-x: visible; overflow-y: scroll;}
+.ie11 .prgbox{flex-direction: column; margin: 0;}
+.ie11 .prgbox div {margin: 10px auto; }
