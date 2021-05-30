@@ -1,0 +1,675 @@
+@charset "UTF-8";
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid olive; */
+    font-family: 'Nanum Myeongjo', serif;
+    list-style: none;
+}
+.inner{
+    width: 1500px;
+    margin: 0 auto;
+}
+h2{
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 800;
+
+    color: #88794b;
+}
+.visual h2{
+    color: rgb(234,231,220);
+}
+h3{
+    font-size: 1.7rem;
+}
+p{
+    line-height: 1.4;
+    font-size: 1.2rem;
+}
+
+
+
+
+/* campusGate */
+.campusGate{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(24, 32, 48);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    padding: 0 50px;
+}
+.showmap, .closemap{
+    cursor: pointer;
+}
+/* campus */
+.mMap{
+    display: none;
+}
+.campus{
+    background-color: rgb(24, 32, 48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0 50px 0;
+}
+.campus h2{
+    margin: 30px 0;
+}
+.campus h2::after{
+    display: none;
+}
+.campus > .text > p{
+    color: white;
+}
+.map{
+    width: 1000px;
+    height: 600px;
+    background: url(../images/lecordonbleu/50whiteworld-map-4706158.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+.map .dot{
+    width: 8px;
+    height: 8px;
+    /* background-color: white; */
+    border-radius: 50%;
+    animation: dotstyle 3s infinite;
+    animation-direction: alternate;
+}
+@keyframes dotstyle{
+    0% { background: rgb(234,231,220);}
+    50% { background: rgb(213,207,186);}
+    100% { background: rgb(193,183,152);}
+}
+.map .dot div{
+    display: none;   
+}
+.map .dot:hover div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    color: rgb(0, 35, 107);
+    width: 250px;
+    text-align: center;
+    position: absolute;
+    top: -135px;
+    left: -120px;
+    z-index: 100;
+}
+.map .dot:hover div p:last-child{
+    font-size: 12px;
+    margin-top: 5px;
+}
+.map .d1{
+    position: absolute;
+    top: 300px;
+    left: 600px;
+}
+.map .d2{
+    position: absolute;
+    top: 268px;
+    left: 417px;
+}
+.map .d3{
+    position: absolute;
+    top: 285px;
+    left: 395px;
+}
+.map .d4{
+    position: absolute;
+    top: 305px;
+    left: 395px;
+}
+.map .d5{
+    position: absolute;
+    top: 305px;
+    left: 395px;
+}
+
+.map .d6{
+    position: absolute;
+    top: 340px;
+    left: 345px;
+}
+.map .d7{
+    position: absolute;
+    top: 370px;
+    left: 335px;
+}
+.map .d8{
+    position: absolute;
+    top: 490px;
+    left: 390px;
+}
+.map .d9{
+    position: absolute;
+    top: 500px;
+    left: 455px;
+}
+.map .d10{
+    position: absolute;
+    top: 505px;
+    left: 470px;
+}
+.map .d11{
+    position: absolute;
+    top: 495px;
+    left: 485px;
+}
+.map .d12{
+    position: absolute;
+    top: 480px;
+    left: 490px;
+}
+.map .d13{
+    position: absolute;
+    top: 515px;
+    left: 555px;
+}
+.map .d14{
+    position: absolute;
+    top: 310px;
+    left: 270px;
+}
+.map .d15{
+    position: absolute;
+    top: 290px;
+    left: 155px;
+}
+.map .d16{
+    position: absolute;
+    top: 260px;
+    left: 130px;
+}
+.map .d17{
+    position: absolute;
+    top: 255px;
+    left: 30px;
+}
+.map .d18{
+    position: absolute;
+    top: 215px;
+    left: 50px;
+}
+.map .d19{
+    position: absolute;
+    top: 205px;
+    left: 45px;
+}
+.map .d20{
+    position: absolute;
+    top: 245px;
+    left: 870px;
+}
+.map .d21{
+    position: absolute;
+    top: 255px;
+    left: 875px;
+}
+.map .d22{
+    position: absolute;
+    top: 335px;
+    left: 820px;
+}
+.map .d23{
+    position: absolute;
+    top: 425px;
+    left: 875px;
+}
+.map .d24{
+    position: absolute;
+    top: 450px;
+    left: 960px;
+}
+.map .d25{
+    position: absolute;
+    top: 445px;
+    left: 975px;
+}
+
+/* header */
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo{
+    width: 500px;
+    height: 150px;
+    background: url(../images/lecordonbleu/logo.png) 0 0 no-repeat;
+    background-size: 100%;
+    display: block;
+}
+.header .search{
+    width: 500px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.span > *{
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+}
+.form{
+    display: flex;
+    align-items: center;
+}
+.header form input{
+    width: 100px;
+    height: 20px;
+    margin-right: 10px;
+}
+.langbutton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.langbutton > span{
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: black;
+}
+.langbutton > span:hover{
+    background-color: #ddd;
+}
+/* nav */
+nav{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 150;
+    background-color: white;
+}
+.menu{
+    position: relative;
+    height: 70px;
+    line-height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+.menu > li div{
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+}
+.menu > li .sub_menu{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    z-index: 100;
+}
+.menu .sub_menu > li{
+    margin: 0 10px;
+    padding: 0 15px;
+}
+.menu li:hover div,
+.menu li:hover{
+    color: rgb(152,136,84);
+}
+.menu li:hover .sub_menu,
+.menu li.sub_menu:hover{
+    height: 70px;
+    transition: height 1s;
+    color: white;
+    background-color: rgba(154, 169, 193, 0.6);
+    border-top: 1px solid #ddd;
+}
+.mMenu, .mX, .msearch, .mform, .mlangbutton{
+    display: none;
+}
+
+/* quickmenu */
+.quickmenu{
+    position: fixed;
+    top: 500px;
+    right: 50px;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.quickmenu > div {
+    width: 80px;
+    height: 60px;
+    background-color: rgb(152,136,84);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.quickmenu .quick {
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(152,136,84);
+    color: white;
+    transition: all 1s;
+    text-decoration: none;
+}
+.quickmenu .quick:hover{
+    width: 160px;
+    background-color: rgb(0, 35, 107);
+}   
+
+/* top */
+.top{
+    width: 80px;
+    height: 50px;
+    background-color: rgb(0, 35, 107);
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    font-size: 20px;
+    color: rgb(154, 169, 193);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 100;
+    transition-duration: 1s;
+}
+
+/* section */
+.visual{
+    width: 100%;
+    height: 400px;
+    line-height: 400px;
+    margin-bottom: 100px;
+    background: url(../images/lecordonbleu/campusbrochure.jpg) 50% 50%, rgb(104, 101, 101);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.fontSize{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.fontSize div{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(24, 32, 48);
+    color: white;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    margin: 1px;
+}
+.section form{
+    display: flex;
+    flex-direction: column;
+}
+.brochure{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.brochure h3{
+    text-align: center;
+    margin: 25px;
+}
+
+.b3 > .document{
+    display: flex;
+    flex-direction: row;
+}
+.bc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 500px;
+    background-color: #ddd;
+}
+.bc > *{
+    margin: 10px 0;
+    text-decoration: none;
+    color: rgb(24, 32, 48);
+}
+.bphoto{
+    width: 250px;
+    height: 350px;
+    display: block;
+}
+.b1 .bphoto{
+    background: url(../images/lecordonbleu/international2.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+.b2 .bphoto{
+    background: url(../images/lecordonbleu/brochure.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.b3 .d1{
+    background: url(../images/lecordonbleu/p1.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+.b3 .d2{
+    background: url(../images/lecordonbleu/p2.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+.b3 .d3{
+    background: url(../images/lecordonbleu/p3.jpg) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    display: none;
+}
+
+.brochurecheck{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+#join{
+    width: 80%;
+    border: 3px solid #ddd;
+    padding: 20px;
+    margin: 50px auto;
+}
+#join > h3{
+    text-align: center;
+}
+#join > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+#join > div input{
+    height: 30px;
+    width: 60%;
+}
+#join > div p{
+    font-size: 1rem;
+    color: rgb(152,136,84);
+}
+
+.brochurecheck .text{
+    padding: 10px;
+}
+#result{
+    text-align: center;
+    color: rgb(152,136,84);
+    font-size: 1.5rem;
+    border: 1px solid #ddd;
+    padding-top: 40px;
+}
+
+
+#buttonlog{
+    margin: 0 auto;
+    color: red;
+}
+.buttonbox{
+    margin: 50px auto;
+}
+.button{
+    margin: 0 auto;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: rgb(152,136,84);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:hover{
+    color: rgb(24, 32, 48);
+    background-color: white;
+    border: 2px solid rgb(24, 32, 48);
+    transition: all 1s;
+}
+
+
+
+
+
+
+
+/* footer */
+footer{
+    height: 250px;
+    padding: 30px 0;
+    background-color: rgb(24, 32, 48);
+    color: rgb(64,72,87);
+    display: flex;
+    flex-direction: column;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+address a{
+    text-decoration: none;
+    color: rgb(64, 72,87);
+}
+.footer .snsicon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+footer .snsicon > a{
+    margin-right:20px;
+    border-radius: 50%;
+    background-color: rgb(64,72,87);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(24,32,48);
+    text-decoration: none;
+}
+.footer > .right{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    margin-top: 30px;
+}
+.lcb i{
+    display: none;
+}
+.lcb > span{
+    margin-right: 10px;
+    position: relative;
+    color:rgb(64,72,87);
+}
+.lcb > span::before{
+    content: "";
+    width: 1px;
+    height: 13px;
+    background-color: rgb(64,72,87);
+    position: absolute;
+    top: 5px;
+    left: -7px;
+}
+.lcb > span:nth-of-type(1)::before{
+    display: none;
+}
+.right > li div{
+    border-top: 1px solid rgb(64, 72,87);
+    border-bottom: 1px solid rgb(64, 72,87);
+    color: white;
+    width: 160px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 5px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.right .sub{
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    margin: 0 5px;
+    position: absolute;
+    display: none;
+}
+.right .sub > li{
+    height: 40px;
+    line-height: 40px;
+    color: rgb(64, 72,87);
+    padding-left: 5px;
+}
+.right .sub > li:last-child{
+border-bottom: 1px solid rgb(64, 72,87);
+}
+.right .sub.on{
+    display: flex;
+}
+
+
+
+
+
+/* 크로스브라우징 */
+
+.is-ie .menu > li .sub_menu {top: 70px}
+.is-ie .se1 .youtube{text-align: center;}
+.is-ie .quickmenu .quick{display: inline-block;}
+.is-ie .map .dot:hover div p{width: 230px;}

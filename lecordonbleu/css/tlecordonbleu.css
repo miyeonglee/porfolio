@@ -1,0 +1,429 @@
+@charset "UTF-8";
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+body{
+    min-width: 641px;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid olive; */
+    font-family: 'Noto Serif KR', serif;
+    list-style: none;
+}
+.inner{
+    width: 100%;
+    margin: 0 auto;
+}
+h2{
+    font-size: 1.5rem;
+    margin: 50px 0;
+}
+h2::after{
+display: none;
+}
+h3{
+    font-size: 1.3rem;
+}
+
+/* 코로나 관련 공지사항 */
+.notice{
+    top: 10px;
+    left: 15px;
+    width: 400px;
+    height: 600px;
+    font-size: 12px;
+}
+.notice h2{
+    word-break: keep-all;
+}
+.noticetext{
+    overflow-y: scroll;
+    text-align: justify;
+}
+/* campus */
+.campusGate{
+    width: 100%;
+    padding: 10px;
+}
+.campus{
+    padding: 20px 40px;
+}
+.campus h2 {
+    margin: 0;
+}
+.campus > .text > p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.map {
+    display: none;
+}
+.mMap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.mcampusbutton{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.mcampus{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.mcampus a{
+    color: white;
+    text-decoration: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2rem;
+}
+
+/* 헤더 */
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 150;
+    border-bottom: 1px solid #ddd;
+}
+.header{
+    height: 100px;
+    padding: 0 10px;
+}
+.header .logo{
+    width: 300px;
+    height: 100%;
+}
+.header .search{
+    display: none;
+}
+.mMenu {
+    display: block;
+    font-size: 25px;
+}
+nav{
+    display: none;
+}
+
+/* nav */
+nav.on{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgb(24, 32, 48);
+    padding: 40px;
+    overflow: scroll;
+}
+.mX{
+    display: flex;
+    align-self: flex-end;
+    font-size: 25px;
+}
+.mform, .mlangbutton, .msearch{
+    display: flex;
+}
+.mform{
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 60px;
+    font-size: 1.2rem;
+}
+.mform input{
+    width: 200px;
+    height: 35px;
+    margin-right: 10px;
+}
+.mlangbutton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.mlangbutton > div{
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    color: white;
+    text-decoration: none;
+}
+.menu{
+    height: auto;
+    flex-direction: column;
+    font-size: 22px;
+}
+.menu > li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.menu > li div{
+    color: white;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+}
+
+.menu > li .sub_menu{
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* overflow-y: visible; */
+    height: auto;
+    color: white;
+    background-color: rgb(154, 169, 193);
+    /* z-index: 0; */
+    position: relative;
+    display: none;
+}
+.menu > li .sub_menu > li{
+    font-size: 20px;
+}
+.menu > li .sub_menu.on{
+    display: flex;
+    height: auto;
+}
+.msearch {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    font-size: 20px;
+    margin: 30px 25px;
+}
+.msearch > span {
+    margin: 0 40px;
+    font-size: 35px;
+}
+
+
+/* quickmenu */
+.quickmenu{
+    right: 0;
+}
+.quickmenu > div{
+    width: 60px;
+    border-radius: 50%;
+}
+.quickmenu > div span{
+    font-size: 0.8rem;
+}
+.quickmenu .quick{
+    width: 60px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    margin: 2px 0;
+}
+
+/* top */
+.top{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    right: 0;
+}
+
+/* visual */
+.visual{
+    width: 100%;
+    height: 500px;
+    word-break: keep-all;
+}
+/* .visual h1{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+.visual .swiper-slide{
+    padding: 150px 20px;
+    text-align: center;
+} */
+
+/* se1 섹션 */
+
+.se1 iframe{
+    width:100%;
+    height:500px;
+}
+.se1 > p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.se1 > h2{
+    margin-bottom: 30px;
+}
+.popup {
+    width: 90%;
+    height: 500px;}
+
+.popup .close {
+    right: 0;
+    top: -45px;
+}
+
+  /* 프로그램 */
+.prgbox{
+    width: auto;
+}
+.se2 > div{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+.prgbox > div{
+    margin: 0 10px;
+}
+.prgbox > .long{
+    width: 400px;
+    height: 300px;
+}
+.prgbox > .short{
+    width: 400px;
+    height: 300px;
+}
+.pbutton span{
+    display: none;
+}
+/* se3 */
+.se3 > h2{
+    margin-bottom: 30px;
+}
+.img .swiper-slide {
+    padding: 20px;
+}
+.img {
+    margin: 0 0 20px 0;
+}
+
+.img > div.on .newstext {
+    padding: 30px  20px;
+}
+
+/* se4 */
+.se4{
+    padding: 20px;
+}
+.se4 > .inner{
+    width: 80%;
+}
+.button{
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: rgb(152,136,84);
+    margin: 20px 0;
+}
+.formopen input{
+    height: 30px;
+}
+.se4 form > * {
+    margin: 5px 0;
+}
+.personal{
+    width: 100%;
+    /* display: flex; */
+    flex-direction: row;
+}
+.personal > div{
+    width: 33.3%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+textarea{
+    width: 100%;
+    height: 300px;
+}
+.notice5{
+    width: auto;
+    padding: 10px;
+    text-align: justify;
+}
+
+/* footer */
+footer{
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+.footer > .right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.right > li{
+    width: 100%;
+    margin: 0 5px;
+}
+.right > li div{
+    width: 100%;
+    height: 45px;
+    padding: 0 15px;
+    margin: 0;
+}
+.right .sub{
+    width: 100%;
+    margin: 0;
+    position: relative;
+    display: none;
+}
+.right .sub.on{
+    display: flex;
+}
+.snsicon{
+    margin-bottom:10px;
+    width: 100%;
+}
+
+/* 크로스브라우징 */
+.is-ie .menu > li .sub_menu {top: 0}
+.is-ie .noticetext p { width:300px; }
+.is-ie .mlangbutton {margin: 10px;}
+.is-ie .noticetext{height: 400px;}
+.is-ie .mcampus a{margin: 0 15px;}
+.is-ie .notice5.open.on {display: table;}
+.is-ie .img > div.on .n2 {display: block;}
+.is-ie .formopen.on{width: 100%;}
+.is-ie .personal.open.on .pb{display: flex;flex-direction: row;}
+.is-ie .right > li{width: 33%;}
+.is-ie .se2 > div{display: block;overflow:visible;}
+.is-ie .prgbox{width: 100%;}
+.is-ie .prgbox:first-child > div{
+    width: 31%;
+}
+.is-ie .prgbox:last-child > div{
+    width: 23%;
+    height: 370px;
+}
