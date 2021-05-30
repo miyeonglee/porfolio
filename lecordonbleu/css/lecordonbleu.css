@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -13,12 +15,6 @@
 .inner{
     width: 1500px;
     margin: 0 auto;
-    color: rgb(0, 35, 107);
-    color: rgb(152,136,84);
-
-    color: rgb(24, 32, 48);
-    color: rgb(64, 72,87);
-
 }
 h1{
     font-size: 3rem;
@@ -55,7 +51,9 @@ p{
     line-height: 1.4;
     font-size: 1.2rem;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 
 /* 코로나 관련 공지사항 */
 .notice{
@@ -76,9 +74,6 @@ p{
 }
 .notice > *{
     margin: 10px 0;
-}
-.noticetext p{
-    margin: 15px 0;
 }
 .notice_close{
     width: 80%;
@@ -122,9 +117,6 @@ p{
     cursor: pointer;
 }
 /* campus */
-.mMap{
-    display: none;
-}
 .campus{
     background-color: rgb(24, 32, 48);
     display: flex;
@@ -176,7 +168,7 @@ p{
     width: 250px;
     text-align: center;
     position: absolute;
-    top: -135px;
+    top: -110px;
     left: -120px;
     z-index: 100;
 }
@@ -318,6 +310,9 @@ p{
     justify-content: space-between;
     align-items: center;
 }
+.mMenu, .mX{
+    display: none;
+}
 .header .logo{
     width: 500px;
     height: 150px;
@@ -331,7 +326,8 @@ p{
     display: flex;
     justify-content: space-between;
 }
-.span > *{
+
+.span a{
     margin: 0 5px;
     text-decoration: none;
     color: black;
@@ -350,7 +346,7 @@ p{
     flex-direction: row;
     align-items: center;
 }
-.langbutton > span{
+.langbutton > a{
     width: 50px;
     height: 20px;
     line-height: 20px;
@@ -359,7 +355,7 @@ p{
     text-decoration: none;
     color: black;
 }
-.langbutton > span:hover{
+.langbutton > a:hover{
     background-color: #ddd;
 }
 /* nav */
@@ -371,8 +367,10 @@ nav{
     z-index: 150;
     background-color: white;
 }
+.msearch{
+    display: none;
+}
 .menu{
-    position: relative;
     height: 70px;
     line-height: 70px;
     display: flex;
@@ -381,7 +379,7 @@ nav{
     letter-spacing: 1px;
     font-size: 20px;
 }
-.menu > li div{
+.menu > li a{
     text-decoration: none;
     color: black;
     margin: 0 10px;
@@ -402,7 +400,7 @@ nav{
     margin: 0 10px;
     padding: 0 15px;
 }
-.menu li:hover div,
+.menu li:hover a,
 .menu li:hover{
     color: rgb(152,136,84);
 }
@@ -414,9 +412,7 @@ nav{
     background-color: rgba(154, 169, 193, 0.6);
     border-top: 1px solid #ddd;
 }
-.mMenu, .mX, .msearch, .mform, .mlangbutton{
-    display: none;
-}
+
 
 /* quickmenu */
 .quickmenu{
@@ -438,7 +434,7 @@ nav{
     flex-direction: column;
     justify-content: center;
 }
-.quickmenu .quick {
+.quickmenu > a {
     width: 80px;
     height: 40px;
     line-height: 40px;
@@ -448,7 +444,7 @@ nav{
     transition: all 1s;
     text-decoration: none;
 }
-.quickmenu .quick:hover{
+.quickmenu > a:hover{
     width: 160px;
     background-color: rgb(0, 35, 107);
 }   
@@ -573,7 +569,6 @@ nav{
   }
   
   .popup .close {
-      text-decoration: none;
     position: absolute;
     right: -40px;
     top: -30px;
@@ -586,11 +581,11 @@ nav{
   }
 
 /* 프로그램 */
-.se2{
+.prg{
     display: flex;
     flex-direction: column;
 }
-.prgbox{
+.pprg{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -598,22 +593,26 @@ nav{
     margin: 20px auto;
     color: white;
 }
-.prgbox > div{
+.pprg > div{
     position: relative;
 }
-.prgbox > .long{
+.pprg > div p{
+    display: none;
+}
+
+.pprg > .long{
     width: 730px;
     height: 250px;
     padding: 40px;
     transition: all 0.5s;
 }
-.prgbox > .short{
+.pprg > .short{
     width: 350px;
     height: 250px;
     padding: 30px;
     transition: all 0.5s;
 }
-.pbutton{
+.pprg .pbutton{
     width: 30px;
     height: 30px;
     color: white;
@@ -629,48 +628,38 @@ nav{
     overflow: hidden;
     display: none;
 }
-.pbutton span{
-    opacity: 0;
-    width: 0;
-}
-.prgbox div p{
+.pprg .pbutton span{
     display: none;
 }
 
-/* hover하면 - on */
-.prgbox > div.on{
+.pprg > div:hover{
     border-radius: 10px;
     box-shadow: 5px 10px 10px rgb(153, 152, 152);
     background-blend-mode: multiply;
     color: white;
-    transform: translate(0, -10px);
+    transform: translate(-10px, -10px);
 }
-.prgbox > div.on .pbutton{
+.pprg > div:hover .pbutton{
     display: flex;
     justify-content: center;
 }
-.prgbox > div.on h3{
+.pprg > div:hover h3{
     margin-bottom: 15px;
 }
-.prgbox > div.on p{
+.pprg > div:hover p{
     display: flex;
     text-align: justify;
 }
-
-/* pbutton.on */
-.pbutton.on{
+.pbutton:hover{
     width: 120px;
     padding: 0 5px;
     justify-content: space-between!important;
     border-radius: 15px;
     transition: width 0.5s;
 }
-.pbutton.on span{
-    width: auto;
-    opacity: 1;
-    transition: all 3.5s;
+.pbutton:hover span{
+    display: flex;
 }
-
 .p01{
     background: url(../images/lecordonbleu/64478.jpg) 50% 45%, #9A9A9A;
     background-size: cover;
@@ -712,10 +701,21 @@ nav{
     margin-bottom: 50px;
 }
 .img {
+    /* display: flex; */
+    /* flex-direction: row; */
     margin: 50px 0;
+    /* position: relative; */
 }
 .img > div{
     height: 400px;
+}
+.newstext{
+    width: 100%;
+    height: 150px;
+    background: rgba(24, 32, 48, 0.5);
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
 }
 .newstext h3{
     color: white;
@@ -726,29 +726,17 @@ nav{
 .newstext p{
     color: #88794b;
 }
-
-.img > div .newstext{
-    width: 100%;
-    height: 150px;
-    background: rgba(24, 32, 48, 0.5);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 20px;
-}
-
-.img > div .n2{
-    display: none;
-}
-/* on */
-.img > div.on .newstext{
+.img > div:hover .newstext{
     height: 100%;
     padding: 150px 20px 20px 20px;
 }
-.img > div.on .n1{
+.newstext .n2{
     display: none;
 }
-.img > div.on .n2{
+.img > div:hover .n1{
+    display: none;
+}
+.img > div:hover .n2{
     display: flex;
     color: white;
 }
@@ -781,8 +769,11 @@ nav{
 }
 
 
-/* se4 */
-.se4{
+
+
+
+/* se5 */
+.se5{
     width: 100%;
     background-color: rgb(64, 72,87);
     display: flex;
@@ -793,24 +784,23 @@ nav{
     padding: 50px;
     position: relative;
 }
-.se4 > .inner{
+.se5 > .inner{
     width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.se4 form > *{
-    margin-bottom: 10px;
-}
-.se4 form span{
-    font-size: 1rem;
-}
-.button{
-    text-align: center;
+.se5 > .inner > div{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px 0;
+}
+
+.se5 form > *{
+    margin-bottom: 10px;
+}
+.button{
     width: 200px;
     height: 40px;
     border-radius: 30px;
@@ -819,8 +809,7 @@ nav{
 }
 .button:hover{
     color: rgb(24, 32, 48);
-    background-color: rgb(234,231,220);
-    border: 2px solid rgb(24, 32, 48);
+    background-color: rgb(153, 152, 152);
     transition: all 1s;
 }
 .personal{
@@ -855,70 +844,53 @@ textarea{
     margin: 0 auto;
 }
 .open, .formopen{
-    display: none;
-    /* display: none!important; */
+    display: none!important;
 }
 .open.on{
-    /* display: flex!important; */
-    display: flex;
+    display: flex!important;
 }
 .formopen.on{
-    /* display: block!important; */
-    display: block;
+    display: block!important;
 }
 
 /* footer */
 footer{
-    height: 250px;
-    padding: 30px 0;
+    height: 300px;
+    padding: 50px 0;
     background-color: rgb(24, 32, 48);
     color: rgb(64,72,87);
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
+/* .푸터 */
 .footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-address a{
+.footer address a{
     text-decoration: none;
     color: rgb(64, 72,87);
 }
-.footer .snsicon{
+.footer > div:first-child{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
 }
-footer .snsicon > a{
-    margin-right:20px;
-    border-radius: 50%;
-    background-color: rgb(64,72,87);
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    color: rgb(24,32,48);
-    text-decoration: none;
-}
-.footer > .right{
+.footer > .ffoo{
     display: flex;
     flex-direction: row;
 }
-.left{
-    margin-top: 30px;
-}
-.lcb i{
+.footer .fo > div > i{
     display: none;
 }
-.lcb > span{
+.footer .fo > span{
     margin-right: 10px;
     position: relative;
     color:rgb(64,72,87);
+    cursor: pointer;
 }
-.lcb > span::before{
+.footer .fo > span::before{
     content: "";
     width: 1px;
     height: 13px;
@@ -927,12 +899,12 @@ footer .snsicon > a{
     top: 5px;
     left: -7px;
 }
-.lcb > span:nth-of-type(1)::before{
+.footer .fo > span:nth-of-type(1)::before{
     display: none;
 }
-.right > li div{
-    border-top: 1px solid rgb(64, 72,87);
-    border-bottom: 1px solid rgb(64, 72,87);
+
+.ffoo > li div{
+    background-color: rgb(64,72,87);
     color: white;
     width: 160px;
     height: 45px;
@@ -945,42 +917,46 @@ footer .snsicon > a{
     align-items: center;
     cursor: pointer;
 }
-.right .sub{
+.ffoo .sub{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     width: 160px;
+    background-color: rgb(154, 169, 193);
     margin: 0 5px;
     position: absolute;
     display: none;
 }
-.right .sub > li{
+.ffoo .sub > li{
     height: 40px;
     line-height: 40px;
-    color: rgb(64, 72,87);
+    background-color: rgb(154, 169, 193);
     padding-left: 5px;
 }
-.right .sub > li:last-child{
-    border-bottom: 1px solid rgb(64, 72,87);
-}
-.right .sub.on{
+.ffoo .sub.on{
     display: flex;
 }
 
-
-
-
-
-/* 크로스브라우징 */
-/* ie10,ie11hack */
-.is-ie .noticetext p {width:400px;}
-.is-ie .menu > li .sub_menu {top: 70px}
-.is-ie .map .dot:hover div p{width: 230px;}
-.is-ie .se1 .youtube{text-align: center;}
-.is-ie .prgbox > div.on p{
-    background-color: rgba(64, 72,87,0.3);
+/* sns */
+footer .snsicon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
 }
-.is-ie .quickmenu .quick,
-.is-ie .prgbox > div.on p,
-.is-ie .notice5.open.on{display: block;}
+footer .snsicon > span{
+    border-radius: 50%;
+    background-color: rgb(64,72,87);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(24,32,48);
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 
