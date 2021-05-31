@@ -74,6 +74,7 @@ header .menu.on a {
 
 .about {
     height: auto;
+    flex-direction: column;
 }
 .about .row1{
     width: auto;
@@ -86,6 +87,7 @@ header .menu.on a {
 .about .row2 {
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 .box {
     width: 220px;
@@ -120,7 +122,14 @@ header .menu.on a {
     width: 250px;
     height: 133px;
     border-radius: 0px;
+    order: 2;
 }
+.workleft .button{
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: flex-end;
+    order: 1;
+    }
 .ss03 .content{
     width: 255px;
     margin: 0;
@@ -143,7 +152,6 @@ font-size: 2rem;
 h5 {
     font-size: 1rem;
 }
-
 
 /* ss04 */
 .position{

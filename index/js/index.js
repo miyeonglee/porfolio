@@ -46,3 +46,6 @@ $(document).ready(function(){
     autoType(".main", 150);
 });
 
+$(".button").click(function () {
+  $(this).toggleClass('on');
+});

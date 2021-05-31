@@ -1,14 +1,23 @@
 @charset "UTF-8";
+<<<<<<< HEAD
+
+* { box-sizing: border-box; }
+=======
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 * {
     box-sizing: border-box; 
     border: 1px solid olivedrab;
 }
+>>>>>>> a02d911dd294ce97ba476c835092aa5d15098223
 body{
     padding: 0;
     margin: 0;
     min-width: 1280px;
+<<<<<<< HEAD
+    color: #fff;
+=======
     color: #000;
+>>>>>>> a02d911dd294ce97ba476c835092aa5d15098223
     font-family: 'Noto Sans KR', sans-serif;
 }
 header,nav,.horizon,footer{ width: 100%; }
@@ -22,12 +31,21 @@ header,nav,.horizon,footer{ width: 100%; }
 .horizon .sec04{ background: #000; }
 .horizon .sec05{ background: #383A3F; } */
 
+<<<<<<< HEAD
+.swiper-container .swiper-wrapper .swiper-slide{
+    padding: 100px;
+}
+
+/* custmm bullets style */
+.header{
+=======
 /* .swiper-container .swiper-wrapper .swiper-slide{
     padding: 100px;
 } */
 
 /* custmm bullets style */
 .horizon > .swiper-pagination{
+>>>>>>> a02d911dd294ce97ba476c835092aa5d15098223
     position: fixed;
     top: 0;
     left: 0;
@@ -51,7 +69,11 @@ header,nav,.horizon,footer{ width: 100%; }
     cursor: pointer;
     margin: 10px;
 }
+<<<<<<< HEAD
+.swiper-pagination-bullet {
+=======
 .horizon > .swiper-pagination .swiper-pagination-bullet {
+>>>>>>> a02d911dd294ce97ba476c835092aa5d15098223
     width: 200px;
     height: 50px;
     border-radius: unset;
@@ -62,6 +84,12 @@ header,nav,.horizon,footer{ width: 100%; }
     opacity: 1;
     background:transparent;
 }
+<<<<<<< HEAD
+.swiper-pagination-bullet-active {
+    font-size: 24px;
+    font-weight: 800;
+    color:#000;
+=======
 .horizon > .swiper-pagination .swiper-pagination-bullet-active {
     font-size: 24px;
     font-weight: 800;
@@ -153,4 +181,5 @@ footer{
     width: 100%;
     height: 300px;
     background-color: rgb(55, 151, 219);
+>>>>>>> a02d911dd294ce97ba476c835092aa5d15098223
 }
