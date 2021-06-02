@@ -91,18 +91,17 @@ function getSize() {
 }
 //get inital font size
 getSize();
-$( "#up" ).on( "click", function() {
-  // parse font size, if less than 50 increase font size
+$( "#up" ).click( function() {
   if ((size + 2) <= 50) {
     $( "form > *" ).css( "font-size", "+=2" );
   }
 });
-
-$( "#down" ).on( "click", function() {
-  if ((size - 2) >= 12) {
+$( "#down" ).click( function() {
+  if ((size - 2) >= 10) {
     $( "form > *" ).css( "font-size", "-=2" );
   }
 });
+
 
 
 //document swiper
@@ -141,7 +140,7 @@ function getCheckboxValue()  {
   selectedEls.forEach((el) => {
     result += el.value + '<br><br>';
   })
-  // })
+
 
   // 출력
   document.getElementById('result').innerHTML

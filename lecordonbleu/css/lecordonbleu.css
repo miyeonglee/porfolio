@@ -410,8 +410,10 @@ nav{
 .menu li.sub_menu:hover{
     height: 70px;
     transition: height 1s;
-    color: white;
-    background-color: rgba(154, 169, 193, 0.6);
+    color: #292929;
+    /* background-color: rgba(154, 169, 193, 0.6); */
+    background-color: rgba(255, 255, 255, 0.6);
+
     border-top: 1px solid #ddd;
 }
 .mMenu, .mX, .msearch, .mform, .mlangbutton{

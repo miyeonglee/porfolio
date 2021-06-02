@@ -242,9 +242,6 @@ $("#email").keyup(function () {
   }
 });
 
-
-
-
 $(".right > li > div").click(function () {
   $(this).next().toggleClass("on");
   $(".right > li > div").not(this).next().removeClass("on");

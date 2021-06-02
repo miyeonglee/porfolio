@@ -340,8 +340,9 @@ nav{
 .menu li.sub_menu:hover{
     height: 70px;
     transition: height 1s;
-    color: white;
-    background-color: rgba(154, 169, 193, 0.6);
+    color: #0b0b0b;
+    /* background-color: rgba(154, 169, 193, 0.6); */
+    background-color: rgba(255, 255, 255, 0.6);
     border-top: 1px solid #ddd;
 }
 .mMenu, .mX, .msearch, .mform, .mlangbutton{
@@ -415,8 +416,9 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    /* justify-content: center; */
 }
-.fontSize div{
+.fontSize > div{
     width: 30px;
     height: 30px;
     background-color: rgb(24, 32, 48);
@@ -425,6 +427,7 @@ nav{
     line-height: 30px;
     text-align: center;
     margin: 1px;
+    cursor: pointer;
 }
 .section form{
     display: flex;
